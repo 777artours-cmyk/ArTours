@@ -8,6 +8,7 @@
 
 # Production
 /build
+!/docs
 
 # Misc
 .DS_Store
