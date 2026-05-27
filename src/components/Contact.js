@@ -68,14 +68,14 @@ function Contact() {
   };
 
   const handleWhatsAppChat = () => {
-    const phoneNumber = '61479146937'; // Without +
+    const phoneNumber = '61400044004'; // Without +
     const message = 'Hi, I\'m interested in AR Tours. Can you tell me more about your offerings?';
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, '_blank', 'noopener,noreferrer');
   };
 
   const handlePhoneCall = () => {
-    window.location.href = 'tel:+61479146937';
+    window.location.href = 'tel:+61400044004';
   };
 
   return (
@@ -218,7 +218,7 @@ function Contact() {
               <div className="info-icon">📞</div>
               <div className="info-details">
                 <h4>Phone</h4>
-                <p>+61 3 9485 5290</p>
+                <p>+61 400 044 004</p>
                 <button className="btn btn-outline" onClick={handlePhoneCall}>
                   Call Now
                 </button>
@@ -229,7 +229,7 @@ function Contact() {
               <div className="info-icon">💬</div>
               <div className="info-details">
                 <h4>WhatsApp Chat</h4>
-                <p>+61 479 146 937</p>
+                <p>+61 400 044 004</p>
                 <button className="btn btn-secondary" onClick={handleWhatsAppChat}>
                   Chat on WhatsApp
                 </button>
@@ -240,8 +240,8 @@ function Contact() {
               <div className="info-icon">✉️</div>
               <div className="info-details">
                 <h4>Email</h4>
-                <p>info@artours.com.au</p>
-                <a href="mailto:info@artours.com.au" className="btn btn-outline">
+                <p>888artours@gmail.com</p>
+                <a href="mailto:888artours@gmail.com" className="btn btn-outline">
                   Send Email
                 </a>
               </div>
@@ -251,7 +251,7 @@ function Contact() {
               <div className="info-icon">📍</div>
               <div className="info-details">
                 <h4>Office Location</h4>
-                <p>Melbourne, Victoria<br />Australia</p>
+                <p>52 Spencer Street<br />Melbourne 3000</p>
               </div>
             </div>
 

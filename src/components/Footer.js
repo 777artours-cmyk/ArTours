@@ -42,10 +42,10 @@ function Footer() {
             <div className="footer-section">
               <h4>Contact Info</h4>
               <ul className="footer-contact">
-                <li>📞 +61 3 9485 5290</li>
-                <li>💬 +61 479 146 937 (WhatsApp)</li>
-                <li>✉️ info@artours.com.au</li>
-                <li>📍 Melbourne, Victoria</li>
+                <li>📞 +61 400 044 004</li>
+                <li>💬 +61 400 044 004 (WhatsApp)</li>
+                <li>✉️ 888artours@gmail.com</li>
+                <li>📍 52 Spencer Street, Melbourne 3000</li>
               </ul>
             </div>
           </div>
