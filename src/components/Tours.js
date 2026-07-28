@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { getTourImage } from '../data/imageLibrary';
 import './Tours.css';
 
 function Tours() {
@@ -116,7 +117,18 @@ function Tours() {
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
             >
               <div className="tour-image">
-                <span className="tour-emoji">{tour.image}</span>
+                <img
+                  src={getTourImage(tour.name).card}
+                  alt={tour.name}
+                  className="tour-photo"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextElementSibling.style.display = 'flex';
+                  }}
+                />
+                <span className="tour-emoji" style={{ display: 'none' }}>
+                  {tour.image}
+                </span>
               </div>
 
               <div className="tour-content">
