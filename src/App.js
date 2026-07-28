@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     // Initialize EmailJS
     if (window.emailjs && !window.emailjs.initialized) {
-      window.emailjs.init('YOUR_EMAILJS_PUBLIC_KEY');
+      window.emailjs.init('C9kwkjYtu1nOmaRLJ');
       window.emailjs.initialized = true;
     }
   }, []);
