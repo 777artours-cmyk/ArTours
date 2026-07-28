@@ -93,7 +93,7 @@ function BookingForm() {
       if (window.emailjs) {
         await window.emailjs.send(
           'service_xfhekqn', // EmailJS service ID
-          'template_booking', // Your EmailJS template ID
+          'template_xfhekqn', // REPLACE with your EmailJS template ID
           templateParams
         );
       }
