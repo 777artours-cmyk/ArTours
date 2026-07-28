@@ -1,72 +1,115 @@
 .animated-hero-container {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 600px;
   overflow: hidden;
-  background: linear-gradient(135deg, #0F3A5C 0%, #00A8A8 100%);
+  background: var(--primary-deep);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
-  padding: 0;
 }
 
-/* Background Scenery SVG */
-.hero-background {
+/* Real photo slideshow */
+.hero-photo-layer {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70%;
-  opacity: 0.9;
+  inset: 0;
 }
 
-/* Tour Vehicle SVG */
-.tour-vehicle {
+.hero-photo-slide {
   position: absolute;
-  top: 35%;
-  left: 0;
-  width: 100%;
-  height: 30%;
-  z-index: 10;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: heroSlideshow 18s infinite, heroKenBurns 18s infinite ease-in-out;
+}
+
+@keyframes heroSlideshow {
+  0%, 4% { opacity: 0; }
+  8%, 28% { opacity: 1; }
+  32%, 100% { opacity: 0; }
+}
+
+@keyframes heroKenBurns {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.12); }
+}
+
+.hero-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(12, 74, 110, 0.55) 0%,
+    rgba(12, 74, 110, 0.35) 45%,
+    rgba(12, 74, 110, 0.75) 100%
+  );
 }
 
 /* Text Overlay */
 .hero-text-overlay {
-  position: absolute;
-  bottom: 40px;
-  left: 0;
-  right: 0;
+  position: relative;
+  z-index: 20;
   text-align: center;
   color: white;
-  z-index: 20;
   padding: 0 20px;
+  max-width: 800px;
 }
 
 .hero-text-overlay h1 {
-  font-size: 2.8rem;
+  color: white;
+  font-size: 3rem;
   font-weight: 700;
-  margin: 0 0 10px 0;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  margin: 0 0 15px 0;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
   letter-spacing: -0.5px;
 }
 
 .hero-text-overlay p {
+  color: white;
   font-size: 1.3rem;
-  font-weight: 300;
-  margin: 0;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 400;
+  margin: 0 0 30px 0;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
   opacity: 0.95;
+}
+
+/* Reliable CSS fade-in (no JS animation library dependency) */
+.hero-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroFadeIn 0.8s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+.hero-fade-in-delay {
+  animation-delay: 0.3s;
+}
+
+.hero-fade-in-delay-2 {
+  animation-delay: 0.5s;
+}
+
+@keyframes heroFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-text-overlay .btn-lg {
+  font-size: 1.1rem;
+  padding: 14px 32px;
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
   .animated-hero-container {
-    height: 400px;
+    height: 500px;
   }
 
   .hero-text-overlay h1 {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
 
   .hero-text-overlay p {
@@ -76,73 +119,51 @@
 
 @media (max-width: 768px) {
   .animated-hero-container {
-    height: 350px;
-  }
-
-  .hero-text-overlay {
-    bottom: 30px;
+    height: 450px;
   }
 
   .hero-text-overlay h1 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
 
   .hero-text-overlay p {
     font-size: 1rem;
   }
-
-  .tour-vehicle {
-    top: 40%;
-    height: 25%;
-  }
 }
 
 @media (max-width: 480px) {
   .animated-hero-container {
-    height: 280px;
-  }
-
-  .hero-text-overlay {
-    bottom: 20px;
-    padding: 0 15px;
+    height: 400px;
   }
 
   .hero-text-overlay h1 {
-    font-size: 1.4rem;
-    margin-bottom: 5px;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
   }
 
   .hero-text-overlay p {
     font-size: 0.9rem;
+    margin-bottom: 20px;
   }
 
-  .tour-vehicle {
-    top: 45%;
-    height: 20%;
+  .hero-text-overlay .btn-lg {
+    font-size: 0.95rem;
+    padding: 12px 24px;
   }
 }
 
-/* Animation Effects */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
+@media (prefers-reduced-motion: reduce) {
+  .hero-photo-slide {
+    animation: heroSlideshowReduced 18s infinite;
   }
-  50% {
-    transform: translateY(-10px);
-  }
-}
 
-@keyframes glow {
-  0%, 100% {
-    filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+  @keyframes heroSlideshowReduced {
+    0%, 4% { opacity: 0; }
+    8%, 28% { opacity: 1; }
+    32%, 100% { opacity: 0; }
   }
-  50% {
-    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.8));
-  }
-}
 
-/* Performance Optimization */
-.animated-hero-container svg {
-  will-change: transform;
-  transform: translate3d(0, 0, 0);
+  .hero-fade-in {
+    animation-duration: 0.01s;
+  }
 }

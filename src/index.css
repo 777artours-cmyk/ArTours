@@ -5,14 +5,21 @@
 }
 
 :root {
-  --primary: #0F3A5C;
-  --secondary: #00A8A8;
-  --accent: #FF8C42;
+  /* Travel/Tourism palette (WCAG-validated) */
+  --primary: #0C4A6E;
+  --primary-deep: #0F3A5C;
+  --secondary: #0EA5E9;
+  --secondary-light: #38BDF8;
+  --accent: #EA580C;
+  --accent-light: #FF8C42;
+  --bg-tint: #F0F9FF;
+  --card-border: #BAE6FD;
   --light: #F5F5F5;
   --dark: #1A1A1A;
-  --gray: #666666;
+  --gray: #64748B;
   --success: #2ECC71;
   --warning: #F39C12;
+  --danger: #DC2626;
 }
 
 html {

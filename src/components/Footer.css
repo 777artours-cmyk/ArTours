@@ -110,6 +110,14 @@
   font-size: 0.9rem;
 }
 
+.photo-credits {
+  margin: 15px 0 0 0;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.7rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
 .footer-legal {
   display: flex;
   align-items: center;

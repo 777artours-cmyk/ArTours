@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, useMotionValue, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import './StatisticsSection.css';
 
 function StatisticsSection() {
@@ -37,12 +37,13 @@ function StatisticsSection() {
   ];
 
   return (
-    <section className="statistics-section" onViewportEnter={() => setIsInView(true)}>
+    <section className="statistics-section">
       <div className="container">
         <motion.div
           className="stats-grid"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
+          onViewportEnter={() => setIsInView(true)}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8 }}
         >
@@ -56,32 +57,34 @@ function StatisticsSection() {
 }
 
 function AnimatedStatCard({ stat, index, shouldAnimate }) {
-  const count = useMotionValue(0);
-  const rounded = useTransform(count, latest => Math.round(latest * 100) / 100);
+  const [displayValue, setDisplayValue] = useState(0);
 
   useEffect(() => {
     if (!shouldAnimate) return;
 
-    const controls = {
-      animate: async () => {
-        count.set(0);
-        const animation = setInterval(() => {
-          count.set(prev => {
-            const increment = stat.value / 50;
-            const newVal = prev + increment;
-            if (newVal >= stat.value) {
-              clearInterval(animation);
-              return stat.value;
-            }
-            return newVal;
-          });
-        }, 30);
-      },
-    };
+    let animationFrame;
+    const timeout = setTimeout(() => {
+      let current = 0;
+      const steps = 50;
+      const increment = stat.value / steps;
 
-    const timeout = setTimeout(() => controls.animate(), index * 100);
-    return () => clearTimeout(timeout);
-  }, [shouldAnimate, stat.value, index, count]);
+      const tick = () => {
+        current += increment;
+        if (current >= stat.value) {
+          setDisplayValue(stat.value);
+          return;
+        }
+        setDisplayValue(Math.round(current * 100) / 100);
+        animationFrame = setTimeout(tick, 30);
+      };
+      tick();
+    }, index * 100);
+
+    return () => {
+      clearTimeout(timeout);
+      clearTimeout(animationFrame);
+    };
+  }, [shouldAnimate, stat.value, index]);
 
   return (
     <motion.div
@@ -97,7 +100,7 @@ function AnimatedStatCard({ stat, index, shouldAnimate }) {
       </div>
       <div className="stat-value-wrapper">
         <motion.div className="stat-value" style={{ color: stat.color }}>
-          <motion.span>{rounded}</motion.span>
+          <span>{displayValue}</span>
           <span className="suffix">{stat.suffix}</span>
         </motion.div>
       </div>

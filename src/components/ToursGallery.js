@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import './ToursGallery.css';
-import { getAllTours, getAllCategories, searchTours, filterToursByPrice, filterToursByRating } from '../data/toursDatabase';
+import { getAllTours, getAllCategories } from '../data/toursDatabase';
 
 function ToursGallery() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -9,7 +9,7 @@ function ToursGallery() {
   const [priceRange, setPriceRange] = useState([0, 1000]);
   const [minRating, setMinRating] = useState(0);
 
-  const allTours = getAllTours();
+  const allTours = useMemo(() => getAllTours(), []);
   const categories = ['All', ...getAllCategories()];
 
   // Filter and search tours
@@ -39,7 +39,7 @@ function ToursGallery() {
     }
 
     return result.sort((a, b) => b.rating - a.rating);
-  }, [selectedCategory, searchQuery, priceRange, minRating]);
+  }, [selectedCategory, searchQuery, priceRange, minRating, allTours]);
 
   const handleTourClick = (tour) => {
     // Scroll to booking form

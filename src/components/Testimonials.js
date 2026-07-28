@@ -1,86 +1,67 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { testimonialImages } from '../data/imageLibrary';
 import './Testimonials.css';
+
+const getInitials = (name) =>
+  name.split(' ').map((part) => part[0]).join('').slice(0, 2).toUpperCase();
 
 function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  const avatars = [
-    testimonialImages.avatar1,
-    testimonialImages.avatar2,
-    testimonialImages.avatar3,
-    testimonialImages.avatar4,
-    testimonialImages.avatar5,
-    testimonialImages.avatar6,
-  ];
 
   const testimonials = [
     {
       id: 1,
       name: 'Sarah Johnson',
       location: 'Sydney, Australia',
-      image: avatars[0],
       tour: 'Great Ocean Road Tour',
       rating: 5,
       text: 'Absolutely incredible experience! The AR technology made the 12 Apostles come alive. Our guide was knowledgeable and fun. Highly recommend!',
       verified: true,
-      isPhoto: true,
     },
     {
       id: 2,
       name: 'Michael Chen',
       location: 'Melbourne, Australia',
-      image: avatars[1],
       tour: 'Penguin Parade Experience',
       rating: 5,
       text: 'The penguin parade tour exceeded all expectations. Seeing the penguins with AR augmentation was mind-blowing. Worth every penny!',
       verified: true,
-      isPhoto: true,
     },
     {
       id: 3,
       name: 'Emma Wilson',
       location: 'Melbourne, Australia',
-      image: avatars[2],
       tour: 'Wine Country AR Tour',
       rating: 5,
       text: 'Best wine tour I\'ve ever done! The AR labels showing wine history and details were fascinating. Professional guides and beautiful locations.',
       verified: true,
-      isPhoto: true,
     },
     {
       id: 4,
       name: 'David Rodriguez',
       location: 'Brisbane, Australia',
-      image: avatars[3],
       tour: 'Melbourne City AR Discovery',
       rating: 5,
       text: 'Fantastic way to explore Melbourne! The AR features showing historical overlays and street art facts made this truly special. Loved every moment!',
       verified: true,
-      isPhoto: true,
     },
     {
       id: 5,
       name: 'Lisa Anderson',
       location: 'Europe',
-      image: avatars[4],
       tour: 'Custom Private Tour',
       rating: 5,
       text: 'Our corporate team had an amazing custom tour. The guides were accommodating, professional, and the AR experience was top-notch!',
       verified: true,
-      isPhoto: true,
     },
     {
       id: 6,
       name: 'James Stewart',
       location: 'Melbourne, Australia',
-      image: avatars[5],
       tour: 'Corporate Transport Service',
       rating: 5,
       text: 'Professional, reliable, and the drivers are incredibly knowledgeable about Melbourne. Perfect for corporate needs. Will use again!',
       verified: true,
-      isPhoto: true,
     },
   ];
 
@@ -131,18 +112,7 @@ function Testimonials() {
                 <div className="testimonial-header">
                   <div className="guest-info">
                     <div className="guest-avatar">
-                      {testimonial.isPhoto ? (
-                        <img
-                          src={testimonial.image}
-                          alt={testimonial.name}
-                          className="avatar-image"
-                          onError={(e) => {
-                            e.target.style.display = 'none';
-                          }}
-                        />
-                      ) : (
-                        testimonial.image
-                      )}
+                      <span className="avatar-initials">{getInitials(testimonial.name)}</span>
                     </div>
                     <div className="guest-details">
                       <h4>{testimonial.name}</h4>
@@ -190,42 +160,6 @@ function Testimonials() {
             ></button>
           ))}
         </div>
-
-        <motion.div
-          className="testimonials-stats"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-              transition: {
-                staggerChildren: 0.1,
-              },
-            },
-          }}
-        >
-          {[
-            { num: '10,000+', label: 'Happy Tourists' },
-            { num: '4.9★', label: 'Average Rating' },
-            { num: '95%', label: 'Recommend Us' },
-            { num: '50+', label: 'Unique Tours' },
-          ].map((stat, idx) => (
-            <motion.div
-              key={idx}
-              className="stat-card"
-              variants={{
-                hidden: { opacity: 0, scale: 0.8 },
-                visible: { opacity: 1, scale: 1, transition: { duration: 0.6 } },
-              }}
-              whileHover={{ scale: 1.05 }}
-            >
-              <h3>{stat.num}</h3>
-              <p>{stat.label}</p>
-            </motion.div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );

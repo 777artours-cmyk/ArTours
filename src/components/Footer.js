@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import { PHOTO_CREDITS } from '../data/imageLibrary';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -64,6 +65,13 @@ function Footer() {
               <a href="#sitemap">Sitemap</a>
             </div>
           </div>
+          <p className="photo-credits">
+            Photos: {PHOTO_CREDITS.map((c, i) => (
+              <span key={i}>
+                {c.subject} ({c.author}, {c.license}){i < PHOTO_CREDITS.length - 1 ? ' · ' : ''}
+              </span>
+            ))} — via Wikimedia Commons
+          </p>
         </div>
       </div>
     </footer>
