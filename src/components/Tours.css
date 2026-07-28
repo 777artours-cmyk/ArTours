@@ -63,13 +63,16 @@
   transform: scale(1.08);
 }
 
-.tour-emoji {
-  font-size: 4rem;
-  display: flex;
+.tour-image-fallback {
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
+  padding: 20px;
 }
 
 .tour-content {
@@ -223,8 +226,8 @@
     min-height: 120px;
   }
 
-  .tour-emoji {
-    font-size: 3rem;
+  .tour-image-fallback {
+    font-size: 1rem;
   }
 
   .tour-footer {

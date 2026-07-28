@@ -126,9 +126,9 @@ function Tours() {
                     e.target.nextElementSibling.style.display = 'flex';
                   }}
                 />
-                <span className="tour-emoji" style={{ display: 'none' }}>
-                  {tour.image}
-                </span>
+                <div className="tour-image-fallback" style={{ display: 'none' }}>
+                  {tour.name}
+                </div>
               </div>
 
               <div className="tour-content">
