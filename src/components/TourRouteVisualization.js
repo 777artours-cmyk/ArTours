@@ -88,25 +88,14 @@ function TourRouteVisualization() {
   return (
     <section className="tour-route-visualization">
       <div className="container">
-        <motion.div
-          className="section-header"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
+        {/* Not opacity-gated, so a stalled animation can't hide the content. */}
+        <div className="section-header">
           <h2>Explore Tour Routes</h2>
           <p>Interactive journey maps of our most popular destinations</p>
-        </motion.div>
+        </div>
 
         {/* Route Selector */}
-        <motion.div
-          className="route-selector"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-        >
+        <div className="route-selector">
           {Object.entries(routes).map(([key, route]) => (
             <motion.button
               key={key}
@@ -119,15 +108,14 @@ function TourRouteVisualization() {
               <span className="route-label">{route.name.split(' ')[0]}</span>
             </motion.button>
           ))}
-        </motion.div>
+        </div>
 
         {/* Route Visualization */}
         <motion.div
           className="route-visualization-wrapper"
           key={selectedRoute}
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.95 }}
+          initial={{ scale: 0.97 }}
+          animate={{ scale: 1 }}
           transition={{ duration: 0.5 }}
         >
           {/* Route Map */}
@@ -242,8 +230,8 @@ function TourRouteVisualization() {
           {/* Route Details */}
           <motion.div
             className="route-details"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ x: 20 }}
+            animate={{ x: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
             <div className="route-header">
@@ -275,8 +263,8 @@ function TourRouteVisualization() {
                 {currentRoute.highlights.map((highlight, idx) => (
                   <motion.li
                     key={idx}
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    initial={{ x: -10 }}
+                    animate={{ x: 0 }}
                     transition={{ delay: 0.4 + idx * 0.1 }}
                   >
                     <span className="highlight-bullet">✓</span>

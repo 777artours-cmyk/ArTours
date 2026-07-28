@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './BookingForm.css';
 import { getAllTours } from '../data/toursDatabase';
+import { SELECT_TOUR_EVENT } from '../services/tourSelection';
 
 function BookingForm() {
   const [formData, setFormData] = useState({
@@ -19,11 +20,19 @@ function BookingForm() {
   const [loading, setLoading] = useState(false);
   const [tours] = useState(getAllTours());
 
+  // EmailJS is initialised once in App.js with the real public key — do not
+  // re-init here, an init() with a placeholder key would overwrite it.
+
+  // A tour card was clicked: adopt it as the selected tour. This has to update
+  // React state; setting the <select>'s value directly is wiped on re-render.
   useEffect(() => {
-    // Initialize EmailJS
-    if (window.emailjs) {
-      window.emailjs.init('YOUR_EMAILJS_PUBLIC_KEY'); // Get from emailjs.com
-    }
+    const onSelectTour = (e) => {
+      const tourName = e.detail?.tourName;
+      if (!tourName) return;
+      setFormData((prev) => ({ ...prev, tourType: tourName }));
+    };
+    window.addEventListener(SELECT_TOUR_EVENT, onSelectTour);
+    return () => window.removeEventListener(SELECT_TOUR_EVENT, onSelectTour);
   }, []);
 
   const handleChange = (e) => {
@@ -122,34 +131,30 @@ function BookingForm() {
     }
   };
 
-  const uniqueTours = [...new Set(tours.map(tour => tour.name))];
+  // The highlights section offers a few tours under shorter names than the
+  // catalog uses, so include whatever was selected even if it isn't one of the
+  // catalog options — otherwise the <select> would silently render blank.
+  const uniqueTours = [...new Set([
+    ...tours.map((tour) => tour.name),
+    ...(formData.tourType ? [formData.tourType] : []),
+  ])];
 
   return (
     <section id="booking" className="booking-section section-padding">
       <div className="container">
-        <motion.div
-          className="section-header"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
+        {/* Not opacity-gated: the booking form is the site's conversion path
+            and must never depend on a JS animation completing to be visible. */}
+        <div className="section-header">
           <div className="divider divider-left"></div>
           <h2>Book Your Australian Adventure</h2>
           <p className="section-subtitle">
             Reserve your tour experience today. Our team will contact you within 24 hours to confirm availability and answer any questions.
           </p>
-        </motion.div>
+        </div>
 
         <div className="booking-content">
           {/* Booking Form */}
-          <motion.div
-            className="booking-form-wrapper"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
+          <div className="booking-form-wrapper">
             <div className="form-header">
               <h3>Quick Booking Form</h3>
               <p>5 minutes to book your adventure</p>
@@ -319,16 +324,10 @@ function BookingForm() {
                 * Required fields. We'll respond within 24 hours.
               </p>
             </form>
-          </motion.div>
+          </div>
 
           {/* Contact Information */}
-          <motion.div
-            className="contact-info-section"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
+          <div className="contact-info-section">
             <h3>Get in Touch</h3>
 
             <motion.div className="info-card" whileHover={{ y: -5 }}>
@@ -416,7 +415,7 @@ function BookingForm() {
                 <span>Verified Tours</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

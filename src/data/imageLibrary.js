@@ -77,14 +77,17 @@ export const PHOTO_CREDITS = [
 export const getTourImage = (tourName) => {
   const key = tourName.toLowerCase();
 
-  if (key.includes('ocean') || key.includes('apostle')) return tourImages.greatOceanRoad;
-  if (key.includes('penguin')) return tourImages.penguinParade;
-  if (key.includes('yarra') || key.includes('wine')) return tourImages.yarraValley;
-  if (key.includes('melbourne') || key.includes('city')) return tourImages.melbourneCity;
+  // Order matters: a tour name can contain several of these words
+  // ("Healesville Sanctuary & Yarra Valley Tour" contains both "sanctuary"
+  // and "yarra"), so the most specific subject is matched first.
+  if (key.includes('healesville') || key.includes('sanctuary') || key.includes('wildlife') || key.includes('koala')) return tourImages.healesville;
+  if (key.includes('penguin') || key.includes('phillip island')) return tourImages.penguinParade;
   if (key.includes('grampians')) return tourImages.grampians;
-  if (key.includes('healesville') || key.includes('wildlife') || key.includes('koala') || key.includes('sanctuary')) return tourImages.healesville;
   if (key.includes('dandenong') || key.includes('puffing billy')) return tourImages.dandenong;
   if (key.includes('mornington')) return tourImages.mornington;
+  if (key.includes('ocean') || key.includes('apostle')) return tourImages.greatOceanRoad;
+  if (key.includes('yarra') || key.includes('wine') || key.includes('winer')) return tourImages.yarraValley;
+  if (key.includes('melbourne') || key.includes('city') || key.includes('laneway') || key.includes('street art') || key.includes('food') || key.includes('cafe') || key.includes('chauffeur') || key.includes('transfer') || key.includes('private')) return tourImages.melbourneCity;
 
   return tourImages.greatOceanRoad;
 };

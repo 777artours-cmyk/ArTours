@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { getTourImage } from '../data/imageLibrary';
+import { SELECT_TOUR_EVENT } from '../services/tourSelection';
 import './Tours.css';
 
 function Tours() {
@@ -74,11 +75,13 @@ function Tours() {
   ];
 
   const handleBookNow = (tourName) => {
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-      // Optionally, you can set focus or show a toast notification
-      alert(`Thanks for your interest in ${tourName}! Please fill out the contact form to proceed with booking.`);
+    window.dispatchEvent(
+      new CustomEvent(SELECT_TOUR_EVENT, { detail: { tourName } })
+    );
+
+    const bookingSection = document.getElementById('booking');
+    if (bookingSection) {
+      bookingSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -91,29 +94,13 @@ function Tours() {
           <p className="section-subtitle">Discover Melbourne and Victoria's most iconic destinations with expert local guides</p>
         </div>
 
-        <motion.div
-          className="tours-grid grid grid-3"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-              transition: {
-                staggerChildren: 0.1,
-              },
-            },
-          }}
-        >
+        {/* Not opacity-gated: tour content must never depend on a JS
+            animation completing in order to be visible. */}
+        <div className="tours-grid grid grid-3">
           {tours.map((tour) => (
             <motion.div
               key={tour.id}
-              className="tour-card card fade-in"
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-              }}
+              className="tour-card card"
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
             >
               <div className="tour-image">
@@ -167,11 +154,11 @@ function Tours() {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
         <div className="tours-cta">
           <h3>Can't find what you're looking for?</h3>
-          <p>Let us create a custom AR tour experience tailored to your needs</p>
+          <p>Let us create a custom tour experience tailored to your needs</p>
           <button className="btn btn-secondary">Customize Your Tour</button>
         </div>
       </div>

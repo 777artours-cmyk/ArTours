@@ -104,9 +104,11 @@ function Testimonials() {
                   <motion.div
                     key={testimonial.id}
                     className={`testimonial-card active`}
-                    initial={{ opacity: 0, x: 100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -100 }}
+                    // Slides horizontally but never animates opacity, so a
+                    // stalled animation can't leave the review invisible.
+                    initial={{ x: 100 }}
+                    animate={{ x: 0 }}
+                    exit={{ x: -100 }}
                     transition={{ duration: 0.5 }}
                   >
                 <div className="testimonial-header">

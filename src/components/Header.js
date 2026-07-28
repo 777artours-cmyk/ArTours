@@ -24,9 +24,9 @@ function Header() {
           <nav className={`nav ${mobileMenuOpen ? 'active' : ''}`}>
             <a href="#tours" onClick={handleNavClick} className="nav-link">Tours</a>
             <a href="#testimonials" onClick={handleNavClick} className="nav-link">Reviews</a>
-            <a href="#contact" onClick={handleNavClick} className="nav-link">Contact</a>
+            <a href="#booking" onClick={handleNavClick} className="nav-link">Contact</a>
             <button className="btn btn-primary" onClick={handleNavClick}>
-              <a href="#contact" style={{ color: 'white', textDecoration: 'none' }}>Book Now</a>
+              <a href="#booking" style={{ color: 'white', textDecoration: 'none' }}>Book Now</a>
             </button>
           </nav>
 

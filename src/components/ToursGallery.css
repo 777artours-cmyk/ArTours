@@ -170,9 +170,16 @@
   justify-content: center;
 }
 
-.tour-image-gallery {
-  font-size: 4rem;
-  text-align: center;
+.tour-gallery-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.tour-card-gallery:hover .tour-gallery-photo {
+  transform: scale(1.06);
 }
 
 /* Badges */
@@ -385,10 +392,6 @@
   .tours-grid-container {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 16px;
-  }
-
-  .tour-image-gallery {
-    font-size: 3rem;
   }
 
   .tour-card-gallery h3 {

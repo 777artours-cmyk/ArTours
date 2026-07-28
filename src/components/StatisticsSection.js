@@ -39,13 +39,11 @@ function StatisticsSection() {
   return (
     <section className="statistics-section">
       <div className="container">
+        {/* Not opacity-gated; onViewportEnter only starts the count-up. */}
         <motion.div
           className="stats-grid"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
           onViewportEnter={() => setIsInView(true)}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8 }}
         >
           {stats.map((stat, idx) => (
             <AnimatedStatCard key={idx} stat={stat} index={idx} shouldAnimate={isInView} />
@@ -57,12 +55,15 @@ function StatisticsSection() {
 }
 
 function AnimatedStatCard({ stat, index, shouldAnimate }) {
-  const [displayValue, setDisplayValue] = useState(0);
+  // Defaults to the real figure so the card reads correctly even if the
+  // count-up never starts; the animation rewinds to 0 only once triggered.
+  const [displayValue, setDisplayValue] = useState(stat.value);
 
   useEffect(() => {
     if (!shouldAnimate) return;
 
     let animationFrame;
+    setDisplayValue(0);
     const timeout = setTimeout(() => {
       let current = 0;
       const steps = 50;

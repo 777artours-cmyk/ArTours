@@ -2,6 +2,8 @@ import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import './ToursGallery.css';
 import { getAllTours, getAllCategories } from '../data/toursDatabase';
+import { getTourImage } from '../data/imageLibrary';
+import { SELECT_TOUR_EVENT } from '../services/tourSelection';
 
 function ToursGallery() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -42,44 +44,35 @@ function ToursGallery() {
   }, [selectedCategory, searchQuery, priceRange, minRating, allTours]);
 
   const handleTourClick = (tour) => {
-    // Scroll to booking form
+    // Tell the booking form which tour was chosen. This must go through the
+    // form's own React state — assigning to the <select>'s .value directly
+    // looks correct until the next render, when React resets it to state and
+    // the selection is silently lost.
+    window.dispatchEvent(
+      new CustomEvent(SELECT_TOUR_EVENT, { detail: { tourName: tour.name } })
+    );
+
     const bookingSection = document.getElementById('booking');
     if (bookingSection) {
       bookingSection.scrollIntoView({ behavior: 'smooth' });
-      // Pre-fill the tour selection if possible
-      const tourSelect = document.querySelector('select[name="tourType"]');
-      if (tourSelect) {
-        tourSelect.value = tour.name;
-      }
     }
   };
 
   return (
     <section id="tours-gallery" className="tours-gallery section-padding">
       <div className="container">
-        {/* Header */}
-        <motion.div
-          className="section-header"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
+        {/* Header. Deliberately not opacity-gated: catalog content must never
+            depend on a JS animation completing in order to be visible. */}
+        <div className="section-header">
           <div className="divider divider-left"></div>
           <h2>Explore Our Complete Tour Catalog</h2>
           <p className="section-subtitle">
-            20+ unforgettable experiences across Melbourne and Victoria. From iconic landmarks to hidden gems.
+            {allTours.length} unforgettable experiences across Melbourne and Victoria. From iconic landmarks to hidden gems.
           </p>
-        </motion.div>
+        </div>
 
         {/* Filters */}
-        <motion.div
-          className="filters-section"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-        >
+        <div className="filters-section">
           {/* Search Bar */}
           <div className="search-bar">
             <input
@@ -147,38 +140,25 @@ function ToursGallery() {
           <div className="results-count">
             Showing <strong>{filteredTours.length}</strong> of <strong>{allTours.length}</strong> tours
           </div>
-        </motion.div>
+        </div>
 
         {/* Tours Grid */}
         {filteredTours.length > 0 ? (
-          <motion.div
-            className="tours-grid-container"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: {
-                  staggerChildren: 0.08,
-                },
-              },
-            }}
-          >
+          <div className="tours-grid-container">
             {filteredTours.map((tour, idx) => (
               <motion.div
                 key={tour.id}
                 className="tour-card-gallery"
-                variants={{
-                  hidden: { opacity: 0, y: 30 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-                }}
                 whileHover={{ y: -8 }}
               >
                 {/* Tour Image */}
                 <div className="tour-image-wrapper">
-                  <div className="tour-image-gallery">{tour.image}</div>
+                  <img
+                    src={getTourImage(tour.name).card}
+                    alt={tour.name}
+                    className="tour-gallery-photo"
+                    loading="lazy"
+                  />
                   {tour.verified && (
                     <div className="verified-badge" title="Verified Tour">
                       ✓ Verified
@@ -246,7 +226,7 @@ function ToursGallery() {
                 </div>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
         ) : (
           <div className="no-results">
             <div className="no-results-icon">🔍</div>
@@ -267,13 +247,7 @@ function ToursGallery() {
         )}
 
         {/* Call to Action */}
-        <motion.div
-          className="tours-cta"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
+        <div className="tours-cta">
           <h3>Can't find the perfect tour?</h3>
           <p>Create a custom itinerary tailored to your interests and schedule</p>
           <motion.button
@@ -289,7 +263,7 @@ function ToursGallery() {
           >
             Customize Your Tour
           </motion.button>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

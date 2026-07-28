@@ -25,7 +25,7 @@ function Footer() {
               <ul className="footer-links">
                 <li><a href="#tours">Our Tours</a></li>
                 <li><a href="#testimonials">Reviews</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#booking">Contact Us</a></li>
                 <li><a href="#tours">Book Now</a></li>
               </ul>
             </div>
