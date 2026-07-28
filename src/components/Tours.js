@@ -10,7 +10,7 @@ function Tours() {
       name: 'Great Ocean Road Tour',
       price: '$1000',
       duration: '12-13 hours',
-      description: 'Experience the iconic 12 Apostles with AR-enhanced storytelling. Explore stunning coastal views, Loch Ard Gorge, and spotting wild koalas in their natural habitat.',
+      description: 'Experience the iconic 12 Apostles with expert local storytelling. Explore stunning coastal views, Loch Ard Gorge, and spotting wild koalas in their natural habitat.',
       image: '🌊',
       highlights: ['12 Apostles', 'Loch Ard Gorge', 'Wild Koalas', 'Scenic Drives'],
       rating: 4.9,
@@ -21,7 +21,7 @@ function Tours() {
       name: 'Penguin Parade Experience',
       price: '$1000',
       duration: '10-12 hours',
-      description: 'Watch the famous little penguin parade at sunset at Phillip Island. AR technology reveals the secret lives and migration patterns of these amazing creatures.',
+      description: 'Watch the famous little penguin parade at sunset at Phillip Island. Our expert guides reveal the secret lives and migration patterns of these amazing creatures.',
       image: '🐧',
       highlights: ['Penguin Parade', 'Phillip Island', 'Sunset Viewing', 'Wildlife Facts'],
       rating: 4.9,
@@ -29,21 +29,21 @@ function Tours() {
     },
     {
       id: 3,
-      name: 'Wine Country AR Tour',
+      name: 'Wine Country Tour',
       price: '$1000',
       duration: '8 hours',
-      description: 'Discover the Yarra Valley wine region with AR-guided tastings. Learn about wine production, vineyard history, and enjoy premium local wines and cheese platters.',
+      description: 'Discover the Yarra Valley wine region with expert-guided tastings. Learn about wine production, vineyard history, and enjoy premium local wines and cheese platters.',
       image: '🍷',
-      highlights: ['Wine Tastings', 'Vineyard Tours', 'Cheese Platters', 'AR Labels'],
+      highlights: ['Wine Tastings', 'Vineyard Tours', 'Cheese Platters', 'Cellar Door Visits'],
       rating: 4.8,
       reviews: 1650,
     },
     {
       id: 4,
-      name: 'Melbourne City AR Discovery',
+      name: 'Melbourne City Discovery',
       price: '$1000',
       duration: '3.5-4 hours',
-      description: 'Explore Melbourne\'s hidden gems and iconic landmarks with AR overlays showing historical facts. Discover street art, architecture, and local history through immersive AR.',
+      description: 'Explore Melbourne\'s hidden gems and iconic landmarks with a local expert guide. Discover street art, architecture, and local history on foot.',
       image: '🏙️',
       highlights: ['Hidden Gems', 'Street Art', 'Architecture', 'Local History'],
       rating: 4.9,
@@ -54,7 +54,7 @@ function Tours() {
       name: 'Private Customized Tour',
       price: '$1000',
       duration: 'Flexible',
-      description: 'Tailor-made AR tours designed for your interests. Whether it\'s corporate groups or special occasions, our expert guides customize the perfect Melbourne experience for you.',
+      description: 'Tailor-made road tours designed for your interests. Whether it\'s corporate groups or special occasions, our expert guides customize the perfect Melbourne experience for you.',
       image: '🎯',
       highlights: ['Custom Itinerary', 'Expert Guides', 'Group Friendly', 'Full Service'],
       rating: 5.0,
@@ -88,7 +88,7 @@ function Tours() {
         <div className="section-header">
           <div className="divider divider-left"></div>
           <h2>Our AR Tours</h2>
-          <p className="section-subtitle">Discover Melbourne's most iconic destinations with immersive augmented reality experiences</p>
+          <p className="section-subtitle">Discover Melbourne and Victoria's most iconic destinations with expert local guides</p>
         </div>
 
         <motion.div

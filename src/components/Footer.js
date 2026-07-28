@@ -12,7 +12,7 @@ function Footer() {
           <div className="footer-grid">
             <div className="footer-section">
               <h4>AR Tours</h4>
-              <p>Melbourne's premier augmented reality tour company. Experience iconic destinations like never before with cutting-edge AR technology and expert guides.</p>
+              <p>Melbourne's premier road touring company. Experience Victoria's most iconic destinations with expert local guides and comfortable, professional transport.</p>
               <div className="footer-social">
                 <a href="#facebook" className="social-icon">f</a>
                 <a href="#instagram" className="social-icon">📷</a>

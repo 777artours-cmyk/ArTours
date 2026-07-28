@@ -1,6 +1,6 @@
-# AR Tours - Melbourne's Premier AR Tour Experience
+# AR Tours - Australia Road Tours, Melbourne's Premier Tour Experience
 
-A modern, responsive single-page application (SPA) for an augmented reality tour company operating in Melbourne. Built with React and featuring six unique tour offerings with bookings, testimonials, and WhatsApp integration.
+A modern, responsive single-page application (SPA) for a road tour company operating in Melbourne. Built with React and featuring six unique tour offerings with bookings, testimonials, and WhatsApp integration.
 
 ## Features
 

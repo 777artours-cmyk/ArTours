@@ -18,7 +18,7 @@ function Header() {
         <div className="header-content">
           <div className="logo">
             <h2>🌍 AR Tours</h2>
-            <p className="tagline">Melbourne's Premier AR Tour Experience</p>
+            <p className="tagline">Australia Road Tours — Melbourne's Premier Tour Experience</p>
           </div>
 
           <nav className={`nav ${mobileMenuOpen ? 'active' : ''}`}>

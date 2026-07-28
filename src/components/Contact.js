@@ -84,7 +84,7 @@ function Contact() {
         <div className="section-header">
           <div className="divider divider-left"></div>
           <h2>Book Your Adventure</h2>
-          <p className="section-subtitle">Reserve your AR tour experience today or contact us for custom arrangements</p>
+          <p className="section-subtitle">Reserve your tour experience today or contact us for custom arrangements</p>
         </div>
 
         <div className="contact-content">
@@ -157,8 +157,8 @@ function Contact() {
                     <option value="">Choose a tour...</option>
                     <option value="great-ocean-road">Great Ocean Road Tour</option>
                     <option value="penguin-parade">Penguin Parade Experience</option>
-                    <option value="wine-tour">Wine Country AR Tour</option>
-                    <option value="city-tour">Melbourne City AR Discovery</option>
+                    <option value="wine-tour">Wine Country Tour</option>
+                    <option value="city-tour">Melbourne City Discovery</option>
                     <option value="custom-tour">Private Customized Tour</option>
                     <option value="corporate">Corporate Transport Service</option>
                   </select>

@@ -15,7 +15,7 @@ function Testimonials() {
       location: 'Sydney, Australia',
       tour: 'Great Ocean Road Tour',
       rating: 5,
-      text: 'Absolutely incredible experience! The AR technology made the 12 Apostles come alive. Our guide was knowledgeable and fun. Highly recommend!',
+      text: 'Absolutely incredible experience! Seeing the 12 Apostles in person was breathtaking. Our guide was knowledgeable and fun. Highly recommend!',
       verified: true,
     },
     {
@@ -24,25 +24,25 @@ function Testimonials() {
       location: 'Melbourne, Australia',
       tour: 'Penguin Parade Experience',
       rating: 5,
-      text: 'The penguin parade tour exceeded all expectations. Seeing the penguins with AR augmentation was mind-blowing. Worth every penny!',
+      text: 'The penguin parade tour exceeded all expectations. Watching the little penguins come ashore at sunset was mind-blowing. Worth every penny!',
       verified: true,
     },
     {
       id: 3,
       name: 'Emma Wilson',
       location: 'Melbourne, Australia',
-      tour: 'Wine Country AR Tour',
+      tour: 'Wine Country Tour',
       rating: 5,
-      text: 'Best wine tour I\'ve ever done! The AR labels showing wine history and details were fascinating. Professional guides and beautiful locations.',
+      text: 'Best wine tour I\'ve ever done! Our guide\'s knowledge of the wine history and vineyards was fascinating. Professional guides and beautiful locations.',
       verified: true,
     },
     {
       id: 4,
       name: 'David Rodriguez',
       location: 'Brisbane, Australia',
-      tour: 'Melbourne City AR Discovery',
+      tour: 'Melbourne City Discovery',
       rating: 5,
-      text: 'Fantastic way to explore Melbourne! The AR features showing historical overlays and street art facts made this truly special. Loved every moment!',
+      text: 'Fantastic way to explore Melbourne! Learning the historical stories behind the street art and architecture made this truly special. Loved every moment!',
       verified: true,
     },
     {
@@ -51,7 +51,7 @@ function Testimonials() {
       location: 'Europe',
       tour: 'Custom Private Tour',
       rating: 5,
-      text: 'Our corporate team had an amazing custom tour. The guides were accommodating, professional, and the AR experience was top-notch!',
+      text: 'Our corporate team had an amazing custom tour. The guides were accommodating, professional, and the whole experience was top-notch!',
       verified: true,
     },
     {
@@ -83,7 +83,7 @@ function Testimonials() {
         <div className="section-header">
           <div className="divider divider-left"></div>
           <h2>What Our Guests Say</h2>
-          <p className="section-subtitle">Real experiences from real travelers who loved their AR Tours adventure</p>
+          <p className="section-subtitle">Real experiences from real travelers who loved their road trip adventure</p>
         </div>
 
         <div className="testimonials-carousel">
