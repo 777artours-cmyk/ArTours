@@ -1,0 +1,266 @@
+.tour-route-visualization {
+  background: #f8f9fa;
+  padding: 80px 20px;
+}
+
+/* Route Selector */
+.route-selector {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.route-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #666;
+}
+
+.route-btn:hover {
+  border-color: var(--secondary);
+  background: rgba(0, 168, 168, 0.05);
+  transform: translateY(-2px);
+}
+
+.route-btn.active {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border-color: var(--secondary);
+  color: white;
+  box-shadow: 0 8px 20px rgba(0, 168, 168, 0.3);
+}
+
+.route-icon {
+  font-size: 1.8rem;
+}
+
+.route-label {
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* Route Visualization Wrapper */
+.route-visualization-wrapper {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Route Map */
+.route-map {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
+}
+
+/* Route Details */
+.route-details {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.route-header h3 {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin: 0 0 8px 0;
+}
+
+.route-description {
+  color: #999;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Route Stats */
+.route-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.stat {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.stat-icon {
+  font-size: 1.5rem;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #999;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 4px 0 0 0;
+}
+
+/* Route Highlights */
+.route-highlights h4 {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.highlights-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.highlights-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.highlight-bullet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: var(--accent);
+  color: white;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* Button */
+.route-details .btn {
+  align-self: flex-start;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .route-visualization-wrapper {
+    grid-template-columns: 1fr;
+    padding: 30px;
+    gap: 30px;
+  }
+
+  .route-map {
+    max-width: 100%;
+  }
+
+  .route-selector {
+    gap: 8px;
+  }
+
+  .route-btn {
+    padding: 10px 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tour-route-visualization {
+    padding: 50px 20px;
+  }
+
+  .route-visualization-wrapper {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .route-header h3 {
+    font-size: 1.5rem;
+  }
+
+  .route-stats {
+    gap: 12px;
+  }
+
+  .stat-value {
+    font-size: 1.1rem;
+  }
+
+  .highlights-list li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tour-route-visualization {
+    padding: 40px 15px;
+  }
+
+  .route-selector {
+    gap: 6px;
+  }
+
+  .route-btn {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+
+  .route-icon {
+    font-size: 1.4rem;
+  }
+
+  .route-visualization-wrapper {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .route-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .route-stats {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+
+  .stat {
+    gap: 8px;
+  }
+
+  .stat-icon {
+    font-size: 1.2rem;
+  }
+
+  .highlights-list li {
+    font-size: 0.85rem;
+  }
+}

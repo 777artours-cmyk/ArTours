@@ -92,7 +92,7 @@ function BookingForm() {
       // Send to business email
       if (window.emailjs) {
         await window.emailjs.send(
-          'service_artours', // Your EmailJS service ID
+          'service_xfhekqn', // EmailJS service ID
           'template_booking', // Your EmailJS template ID
           templateParams
         );

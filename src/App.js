@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import TourRouteVisualization from './components/TourRouteVisualization';
 import Tours from './components/Tours';
 import ToursGallery from './components/ToursGallery';
 import Testimonials from './components/Testimonials';
@@ -22,6 +23,7 @@ function App() {
     <div className="App">
       <Header />
       <Hero />
+      <TourRouteVisualization />
       <Tours />
       <ToursGallery />
       <Testimonials />
