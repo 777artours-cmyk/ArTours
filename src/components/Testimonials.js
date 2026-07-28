@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import './Testimonials.css';
 
 function Testimonials() {
@@ -89,20 +90,28 @@ function Testimonials() {
         </div>
 
         <div className="testimonials-carousel">
-          <button
+          <motion.button
             className="carousel-button prev"
             onClick={prevSlide}
             aria-label="Previous testimonial"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
           >
             ❮
-          </button>
+          </motion.button>
 
           <div className="testimonials-container">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={testimonial.id}
-                className={`testimonial-card ${index === currentIndex ? 'active' : ''}`}
-              >
+            <AnimatePresence mode="wait">
+              {testimonials.map((testimonial, index) => (
+                index === currentIndex && (
+                  <motion.div
+                    key={testimonial.id}
+                    className={`testimonial-card active`}
+                    initial={{ opacity: 0, x: 100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -100 }}
+                    transition={{ duration: 0.5 }}
+                  >
                 <div className="testimonial-header">
                   <div className="guest-info">
                     <div className="guest-avatar">{testimonial.image}</div>
@@ -125,17 +134,21 @@ function Testimonials() {
                   <p className="testimonial-text">"{testimonial.text}"</p>
                   <span className="tour-name">— {testimonial.tour}</span>
                 </div>
-              </div>
-            ))}
+                  </motion.div>
+                )
+              ))}
+            </AnimatePresence>
           </div>
 
-          <button
+          <motion.button
             className="carousel-button next"
             onClick={nextSlide}
             aria-label="Next testimonial"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
           >
             ❯
-          </button>
+          </motion.button>
         </div>
 
         <div className="carousel-indicators">
@@ -149,24 +162,41 @@ function Testimonials() {
           ))}
         </div>
 
-        <div className="testimonials-stats">
-          <div className="stat-card">
-            <h3>10,000+</h3>
-            <p>Happy Tourists</p>
-          </div>
-          <div className="stat-card">
-            <h3>4.9★</h3>
-            <p>Average Rating</p>
-          </div>
-          <div className="stat-card">
-            <h3>95%</h3>
-            <p>Recommend Us</p>
-          </div>
-          <div className="stat-card">
-            <h3>50+</h3>
-            <p>Unique Tours</p>
-          </div>
-        </div>
+        <motion.div
+          className="testimonials-stats"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.1,
+              },
+            },
+          }}
+        >
+          {[
+            { num: '10,000+', label: 'Happy Tourists' },
+            { num: '4.9★', label: 'Average Rating' },
+            { num: '95%', label: 'Recommend Us' },
+            { num: '50+', label: 'Unique Tours' },
+          ].map((stat, idx) => (
+            <motion.div
+              key={idx}
+              className="stat-card"
+              variants={{
+                hidden: { opacity: 0, scale: 0.8 },
+                visible: { opacity: 1, scale: 1, transition: { duration: 0.6 } },
+              }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <h3>{stat.num}</h3>
+              <p>{stat.label}</p>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

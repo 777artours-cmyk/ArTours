@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './Tours.css';
 
 function Tours() {
@@ -89,9 +90,31 @@ function Tours() {
           <p className="section-subtitle">Discover Melbourne's most iconic destinations with immersive augmented reality experiences</p>
         </div>
 
-        <div className="tours-grid grid grid-3">
+        <motion.div
+          className="tours-grid grid grid-3"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.1,
+              },
+            },
+          }}
+        >
           {tours.map((tour) => (
-            <div key={tour.id} className="tour-card card fade-in">
+            <motion.div
+              key={tour.id}
+              className="tour-card card fade-in"
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+              }}
+              whileHover={{ y: -8, transition: { duration: 0.3 } }}
+            >
               <div className="tour-image">
                 <span className="tour-emoji">{tour.image}</span>
               </div>
@@ -120,17 +143,19 @@ function Tours() {
                   <div className="tour-price">
                     <span className="price">{tour.price}</span>
                   </div>
-                  <button
+                  <motion.button
                     className="btn btn-primary"
                     onClick={() => handleBookNow(tour.name)}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                   >
                     Book Now
-                  </button>
+                  </motion.button>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         <div className="tours-cta">
           <h3>Can't find what you're looking for?</h3>
