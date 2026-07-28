@@ -1,21 +1,31 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Tours from './components/Tours';
+import ToursGallery from './components/ToursGallery';
 import Testimonials from './components/Testimonials';
-import Contact from './components/Contact';
+import BookingForm from './components/BookingForm';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 
 function App() {
+  useEffect(() => {
+    // Initialize EmailJS
+    if (window.emailjs && !window.emailjs.initialized) {
+      window.emailjs.init('YOUR_EMAILJS_PUBLIC_KEY');
+      window.emailjs.initialized = true;
+    }
+  }, []);
+
   return (
     <div className="App">
       <Header />
       <Hero />
       <Tours />
+      <ToursGallery />
       <Testimonials />
-      <Contact />
+      <BookingForm />
       <Footer />
       <WhatsAppButton />
     </div>
