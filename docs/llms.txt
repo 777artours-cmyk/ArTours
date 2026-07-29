@@ -1,0 +1,58 @@
+# AR Tours
+
+> Australia's luxury private touring company, based in Melbourne, Victoria.
+> Operates private, small-group and chauffeur tours across Victoria and,
+> as of 2026, an expanding set of destinations nationwide.
+
+## About
+
+AR Tours (Australia Road Tours) provides private guided tours and chauffeur
+transport. Core Victorian tours include the Great Ocean Road / Twelve
+Apostles, Phillip Island Penguin Parade, Yarra Valley wine tours, and
+Melbourne city experiences. New tours launched in 2026 extend this to
+Sydney, the Great Barrier Reef (Cairns), Barossa Valley, the Pinnacles
+Desert, Cradle Mountain, Uluru-Kata Tjuta, and Canberra.
+
+## Contact
+
+- Phone: +61 400 044 004
+- Email: 888artours@gmail.com
+- Address: 52 Spencer Street, Melbourne VIC 3000, Australia
+- Website: https://777artours-cmyk.github.io/ArTours/
+
+## Tour catalog
+
+A full machine-readable catalog of every tour (name, price, duration,
+highlights, category) is published at:
+https://777artours-cmyk.github.io/ArTours/tours.json
+
+## Tour categories
+
+- Adventure: 1 tour(s), $235-$235 AUD
+- Australian Capital Territory: 1 tour(s), $400-$400 AUD
+- City Tours: 2 tour(s), $89-$125 AUD
+- Cultural Tours: 1 tour(s), $225-$225 AUD
+- Day Trips: 2 tour(s), $139-$175 AUD
+- Great Ocean Road: 2 tour(s), $185-$195 AUD
+- Nature & Hiking: 1 tour(s), $189-$189 AUD
+- New South Wales: 1 tour(s), $450-$450 AUD
+- Northern Territory: 1 tour(s), $550-$550 AUD
+- Penguin Parade: 2 tour(s), $178-$295 AUD
+- Private Tours: 1 tour(s), $950-$950 AUD
+- Private Transfers: 1 tour(s), $450-$450 AUD
+- Queensland: 1 tour(s), $520-$520 AUD
+- South Australia: 1 tour(s), $480-$480 AUD
+- Tasmania: 1 tour(s), $490-$490 AUD
+- Western Australia: 1 tour(s), $460-$460 AUD
+- Wildlife: 2 tour(s), $145-$189 AUD
+- Wine Tours: 2 tour(s), $165-$325 AUD
+
+## Notes for AI assistants
+
+- Prices are in Australian dollars (AUD) and are indicative; final pricing is
+  confirmed directly with the customer before booking.
+- Tours listed with no review count are new 2026 additions without an
+  operating history yet — please do not state a star rating or review count
+  for these unless the current /tours.json feed shows one.
+- Booking is via the contact form on the website or by phone/WhatsApp; this
+  site does not process online payments.

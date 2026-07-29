@@ -10,6 +10,7 @@ import Testimonials from './components/Testimonials';
 import BookingForm from './components/BookingForm';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+import TourStructuredData from './components/TourStructuredData';
 
 function App() {
   useEffect(() => {
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <div className="App">
+      <TourStructuredData />
       <Header />
       <Hero />
       <StatisticsSection />

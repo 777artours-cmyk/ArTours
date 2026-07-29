@@ -1,0 +1,822 @@
+{
+  "generatedAt": "2026-07-29T08:38:47.986Z",
+  "business": {
+    "name": "AR Tours",
+    "description": "Australia's luxury private touring company",
+    "url": "https://777artours-cmyk.github.io/ArTours",
+    "telephone": "+61400044004",
+    "email": "888artours@gmail.com",
+    "address": "52 Spencer Street, Melbourne VIC 3000, Australia"
+  },
+  "tourCount": 24,
+  "tours": [
+    {
+      "id": "gor-full-day",
+      "name": "Great Ocean Road Full Day Tour - 12 Apostles Experience",
+      "category": "Great Ocean Road",
+      "description": "Experience Australia's most iconic coastal drive. See the famous 12 Apostles, Loch Ard Gorge, and pristine beaches with expert commentary.",
+      "priceAUD": 185,
+      "duration": "12-13 hours",
+      "groupSize": "Small groups (max 12)",
+      "difficulty": "Easy",
+      "accessibility": true,
+      "highlights": [
+        "Visit 12 Apostles limestone formations",
+        "Loch Ard Gorge historical site",
+        "Otway Rainforest walk",
+        "Torquay surf beach stop",
+        "Morning tea & lunch included",
+        "Professional photography opportunities",
+        "Wildlife spotting (koalas, kangaroos)"
+      ],
+      "includes": [
+        "Guided tour",
+        "Light refreshments",
+        "Professional guide",
+        "Complimentary photos"
+      ],
+      "bestFor": [
+        "Families",
+        "Couples",
+        "First-time visitors"
+      ],
+      "rating": 4.9,
+      "reviewCount": 2847,
+      "isNewListing": false,
+      "url": "https://777artours-cmyk.github.io/ArTours/#tours-gallery"
+    },
+    {
+      "id": "gor-sunset",
+      "name": "Great Ocean Road Sunset Experience",
+      "category": "Great Ocean Road",
+      "description": "Witness the magical sunset at the 12 Apostles. Perfect for photographers and romantic getaways.",
+      "priceAUD": 195,
+      "duration": "8-9 hours",
+      "groupSize": "Small groups (max 10)",
+      "difficulty": "Easy",
+      "accessibility": true,
+      "highlights": [
+        "Sunset at 12 Apostles",
+        "Fewer crowds than day tours",
+        "Professional photography guidance",
+        "Cocktail/wine & cheese included",
+        "Cosy group atmosphere"
+      ],
+      "includes": [
+        "Guide",
+        "Refreshments",
+        "Photography tips"
+      ],
+      "bestFor": [
+        "Couples",
+        "Photographers",
+        "Sunset lovers"
+      ],
+      "rating": 4.8,
+      "reviewCount": 1923,
+      "isNewListing": false,
+      "url": "https://777artours-cmyk.github.io/ArTours/#tours-gallery"
+    },
+    {
+      "id": "penguin-classic",
+      "name": "Phillip Island Penguin Parade - Classic Experience",
+      "category": "Penguin Parade",
+      "description": "Watch the famous little penguin parade at sunset. See dozens of penguins return to shore at Phillip Island.",
+      "priceAUD": 178,
+      "duration": "10-12 hours",
+      "groupSize": "Groups up to 20",
+      "difficulty": "Easy",
+      "accessibility": true,
+      "highlights": [
+        "See 50+ little penguins return to shore",
+        "Phillip Island penguin parade (sunset)",
+        "Nobbies Nature Reserve walk",
+        "Seal spotting opportunities",
+        "Premium seating included",
+        "Expert wildlife guide",
+        "Informative pre-parade briefing"
+      ],
+      "includes": [
+        "Entry to penguin parade",
+        "Expert guide",
+        "Viewing area access",
+        "Light snacks"
+      ],
+      "bestFor": [
+        "Families",
+        "Children",
+        "Nature lovers",
+        "Wildlife enthusiasts"
+      ],
+      "rating": 4.9,
+      "reviewCount": 3421,
+      "isNewListing": false,
+      "url": "https://777artours-cmyk.github.io/ArTours/#tours-gallery"
+    },
+    {
+      "id": "penguin-vip",
+      "name": "Penguin Parade VIP Experience - Premium Seating",
+      "category": "Penguin Parade",
+      "description": "Exclusive VIP access to premium viewing areas with gourmet refreshments and intimate group sizes.",
+      "priceAUD": 295,
+      "duration": "10-12 hours",
+      "groupSize": "Small groups (max 8)",
+      "difficulty": "Easy",
+      "accessibility": true,
+      "highlights": [
+        "VIP viewing platform with best views",
+        "Private guide exclusively for your group",
+        "Gourmet refreshments & wine",
+        "Nobbies premium reserve walk",
+        "Seal spotting from exclusive area",
+        "Limited to 8 people per group",
+        "Professional wildlife photography"
+      ],
+      "includes": [
+        "VIP entry",
+        "Gourmet snacks",
+        "Premium guide",
+        "Wi-Fi onboard"
+      ],
+      "bestFor": [
+        "Couples",
+        "Special occasions",
+        "Premium travelers"
+      ],
+      "rating": 4.95,
+      "reviewCount": 892,
+      "isNewListing": false,
+      "url": "https://777artours-cmyk.github.io/ArTours/#tours-gallery"
+    },
+    {
+      "id": "wine-classic",
+      "name": "Yarra Valley Wine Tour - 3 Wineries",
+      "category": "Wine Tours",
+      "description": "Visit 3 premium wineries in the Yarra Valley. Taste award-winning wines and enjoy lunch at a cellar door.",
+      "priceAUD": 165,
+      "duration": "6-7 hours",
+      "groupSize": "Groups up to 15",
+      "difficulty": "Easy",
+      "accessibility": true,
+      "highlights": [
+        "Visit 3 premium wineries",
+        "Wine tastings at each winery",
+        "Lunch at a cellar door restaurant",
+        "Expert sommelier guide",
+        "Behind-the-scenes winery tours",
+        "Cheese & charcuterie platter",
+        "Learn about Australian wines"
+      ],
+      "includes": [
+        "Wine tastings",
+        "Lunch",
+        "Expert guide",
+        "Transport"
+      ],
+      "bestFor": [
+        "Wine lovers",
+        "Food enthusiasts",
+        "Adults"
+      ],
+      "rating": 4.85,
+      "reviewCount": 2156,
+      "isNewListing": false,
+      "url": "https://777artours-cmyk.github.io/ArTours/#tours-gallery"
+    },
+    {
+      "id": "wine-deluxe",
+      "name": "Yarra Valley Deluxe Experience - 5 Wineries & Spa",
+      "category": "Wine Tours",
+      "description": "Premium wine experience with 5 wineries, gourmet multi-course lunch, and spa treatment included.",
+      "priceAUD": 325,
+      "duration": "8-9 hours",
+      "groupSize": "Small groups (max 8)",
+      "difficulty": "Easy",
+      "accessibility": true,
+      "highlights": [
+        "Visit 5 exclusive wineries",
+        "Multi-course gourmet lunch",
+        "Wine pairing with each course",
+        "Spa treatment (massage/facial)",
+        "Private sommelier",
+        "Luxury transport (limo)",
+        "Complimentary wine bottle to take home"
+      ],
+      "includes": [
+        "All tastings",
+        "Gourmet lunch",
+        "Spa",
+        "Luxury transport",
+        "Wine bottle"
+      ],
+      "bestFor": [
+        "Luxury travelers",
+        "Special occasions",
+        "Couples"
+      ],
+      "rating": 4.9,
+      "reviewCount": 654,
+      "isNewListing": false,
+      "url": "https://777artours-cmyk.github.io/ArTours/#tours-gallery"
+    },
+    {
+      "id": "dandenong-classic",
+      "name": "Dandenong Ranges & Puffing Billy Railway Tour",
+      "category": "Day Trips",
+      "description": "Ride the historic Puffing Billy steam railway and explore charming mountain villages.",
+      "priceAUD": 139,
+      "duration": "5-6 hours",
+      "groupSize": "Groups up to 18",
+      "difficulty": "Easy",
+      "accessibility": true,
+      "highlights": [
+        "Puffing Billy steam railway ride (7.5km)",
+        "Belgrave & Emerald village exploration",
+        "Sherbrooke Falls visit",
+        "Fern Gully National Park walk",
+        "Mountain village tea & scones",
+        "Photo stops at scenic locations",
+        "Local history & nature interpretation"
+      ],
+      "includes": [
+        "Railway ticket",
+        "Morning tea",
+        "Guide",
+        "Vehicle"
+      ],
+      "bestFor": [
+        "Families",
+        "Train enthusiasts",
+        "History lovers"
+      ],
+      "rating": 4.88,
+      "reviewCount": 1876,
+      "isNewListing": false,
+      "url": "https://777artours-cmyk.github.io/ArTours/#tours-gallery"
+    },
+    {
+      "id": "private-chauffeur-4hr",
+      "name": "Private Chauffeur Service - 4 Hours",
+      "category": "Private Transfers",
+      "description": "Premium private chauffeur service. Explore Melbourne at your own pace with a professional driver.",
+      "priceAUD": 450,
+      "duration": "4 hours",
+      "groupSize": "Up to 6 passengers",
+      "difficulty": "Easy",
+      "accessibility": true,
+      "highlights": [
+        "Professional, courteous chauffeur",
+        "Luxury vehicle (Mercedes/BMW)",
+        "Flexible itinerary",
+        "Stop at your chosen locations",
+        "Local insights & recommendations",
+        "Climate-controlled comfort",
+        "Premium amenities onboard"
+      ],
+      "includes": [
+        "Luxury vehicle",
+        "Professional driver",
+        "Bottled water",
+        "WiFi"
+      ],
+      "bestFor": [
+        "Business travelers",
+        "Special events",
+        "Groups",
+        "Airport transfers"
+      ],
+      "rating": 4.95,
+      "reviewCount": 1240,
+      "isNewListing": false,
+      "url": "https://777artours-cmyk.github.io/ArTours/#tours-gallery"
+    },
+    {
+      "id": "private-full-day-tour",
+      "name": "Private Full Day Custom Tour - Melbourne & Surrounds",
+      "category": "Private Tours",
+      "description": "Bespoke private tour tailored to your interests. Visit hidden gems, museums, or nature spots.",
+      "priceAUD": 950,
+      "duration": "8-10 hours",
+      "groupSize": "Up to 8 passengers",
+      "difficulty": "Easy",
+      "accessibility": true,
+      "highlights": [
+        "Completely customizable itinerary",
+        "Expert local guide",
+        "Luxury vehicle with WiFi",
+        "Gourmet lunch included",
+        "Photography opportunities",
+        "Skip-the-line access to attractions",
+        "Personalized recommendations"
+      ],
+      "includes": [
+        "Luxury transport",
+        "Expert guide",
+        "Lunch",
+        "Entry to 2-3 attractions"
+      ],
+      "bestFor": [
+        "Private groups",
+        "Special interests",
+        "VIP travelers",
+        "Families"
+      ],
+      "rating": 4.9,
+      "reviewCount": 687,
+      "isNewListing": false,
+      "url": "https://777artours-cmyk.github.io/ArTours/#tours-gallery"
+    },
+    {
+      "id": "melbourne-street-art",
+      "name": "Melbourne Street Art & Laneways Walking Tour",
+      "category": "City Tours",
+      "description": "Discover Melbourne's vibrant street art scene. Explore famous laneways and meet local artists.",
+      "priceAUD": 89,
+      "duration": "2.5-3 hours",
+      "groupSize": "Groups up to 20",
+      "difficulty": "Easy",
+      "accessibility": true,
+      "highlights": [
+        "Hosier Lane famous murals",
+        "AC/DC Lane history",
+        "ACCA gallery district",
+        "Hidden laneways exploration",
+        "Street art photography tips",
+        "Local artist insights",
+        "Coffee stop in trendy cafe"
+      ],
+      "includes": [
+        "Walking tour",
+        "Expert guide",
+        "Coffee",
+        "Souvenir map"
+      ],
+      "bestFor": [
+        "Art lovers",
+        "Instagram enthusiasts",
+        "Creative types"
+      ],
+      "rating": 4.87,
+      "reviewCount": 2934,
+      "isNewListing": false,
+      "url": "https://777artours-cmyk.github.io/ArTours/#tours-gallery"
+    },
+    {
+      "id": "melbourne-food-tour",
+      "name": "Melbourne Food & Cafe Culture Tour",
+      "category": "City Tours",
+      "description": "Experience Melbourne's world-famous coffee culture and local food scene.",
+      "priceAUD": 125,
+      "duration": "3-4 hours",
+      "groupSize": "Groups up to 12",
+      "difficulty": "Easy",
+      "accessibility": true,
+      "highlights": [
+        "Visit 4-5 local cafes",
+        "Coffee tasting & barista tips",
+        "Gourmet food sampling",
+        "Laneway food markets",
+        "Meet local cafe owners",
+        "Learn about specialty coffee",
+        "Sweet treats & desserts"
+      ],
+      "includes": [
+        "Food tastings",
+        "Coffee samples",
+        "Expert guide"
+      ],
+      "bestFor": [
+        "Food lovers",
+        "Coffee enthusiasts",
+        "Foodies"
+      ],
+      "rating": 4.89,
+      "reviewCount": 1654,
+      "isNewListing": false,
+      "url": "https://777artours-cmyk.github.io/ArTours/#tours-gallery"
+    },
+    {
+      "id": "healesville-sanctuary",
+      "name": "Healesville Sanctuary & Yarra Valley Tour",
+      "category": "Wildlife",
+      "description": "Get up close with Australian wildlife at Healesville Sanctuary. Pet a koala and see native animals.",
+      "priceAUD": 145,
+      "duration": "5-6 hours",
+      "groupSize": "Groups up to 20",
+      "difficulty": "Easy",
+      "accessibility": true,
+      "highlights": [
+        "Koala encounters & petting",
+        "Wombat close encounters",
+        "Bird shows & demonstrations",
+        "Kangaroo feeding",
+        "Aboriginal cultural performances",
+        "Wine tasting (Yarra Valley)",
+        "Picnic lunch included"
+      ],
+      "includes": [
+        "Sanctuary entry",
+        "Guide",
+        "Lunch",
+        "Wine tasting"
+      ],
+      "bestFor": [
+        "Families",
+        "Animal lovers",
+        "Nature enthusiasts"
+      ],
+      "rating": 4.86,
+      "reviewCount": 1456,
+      "isNewListing": false,
+      "url": "https://777artours-cmyk.github.io/ArTours/#tours-gallery"
+    },
+    {
+      "id": "moonlit-sanctuary",
+      "name": "Moonlit Sanctuary - Nocturnal Wildlife Experience",
+      "category": "Wildlife",
+      "description": "Experience Australia's nocturnal animals. Hand-feed kangaroos and see exotic wildlife at night.",
+      "priceAUD": 189,
+      "duration": "2-3 hours",
+      "groupSize": "Groups up to 25",
+      "difficulty": "Easy",
+      "accessibility": true,
+      "highlights": [
+        "Hand-feed kangaroos",
+        "Nocturnal animal viewing",
+        "Wombat encounters",
+        "Guided night walk",
+        "Animal keeper talks",
+        "Photography opportunities",
+        "Spotlight safari experience"
+      ],
+      "includes": [
+        "Entry",
+        "Guide",
+        "Kangaroo food",
+        "Torch"
+      ],
+      "bestFor": [
+        "Families",
+        "Night owls",
+        "Photographers"
+      ],
+      "rating": 4.88,
+      "reviewCount": 892,
+      "isNewListing": false,
+      "url": "https://777artours-cmyk.github.io/ArTours/#tours-gallery"
+    },
+    {
+      "id": "grampians-full-day",
+      "name": "Grampians National Park Full Day Adventure",
+      "category": "Nature & Hiking",
+      "description": "Explore stunning Grampians National Park. Hiking, Aboriginal sites, and panoramic views.",
+      "priceAUD": 189,
+      "duration": "10-11 hours",
+      "groupSize": "Groups up to 16",
+      "difficulty": "Moderate",
+      "accessibility": true,
+      "highlights": [
+        "MacKenzie Falls waterfall hike",
+        "Boroka Lookout panoramic views",
+        "Aboriginal cultural sites",
+        "Wonderland Loop hike",
+        "Picturesque valleys & peaks",
+        "Wildlife spotting",
+        "Gourmet lunch included"
+      ],
+      "includes": [
+        "Guide",
+        "Park entry",
+        "Lunch",
+        "Transport"
+      ],
+      "bestFor": [
+        "Hikers",
+        "Nature lovers",
+        "Adventure seekers"
+      ],
+      "rating": 4.84,
+      "reviewCount": 987,
+      "isNewListing": false,
+      "url": "https://777artours-cmyk.github.io/ArTours/#tours-gallery"
+    },
+    {
+      "id": "mornington-wine-beach",
+      "name": "Mornington Peninsula Wine & Beach Day Tour",
+      "category": "Day Trips",
+      "description": "Wine tasting at premium wineries and relax at beautiful Mornington beaches.",
+      "priceAUD": 175,
+      "duration": "8-9 hours",
+      "groupSize": "Groups up to 14",
+      "difficulty": "Easy",
+      "accessibility": true,
+      "highlights": [
+        "Visit 2-3 premium wineries",
+        "Wine tastings & education",
+        "Merricks General Store",
+        "Scenic beach walks",
+        "Gourmet lunch",
+        "Hot springs spa visit",
+        "Sunset views"
+      ],
+      "includes": [
+        "Wine tastings",
+        "Lunch",
+        "Spa entry",
+        "Guide"
+      ],
+      "bestFor": [
+        "Couples",
+        "Wine lovers",
+        "Relaxation seekers"
+      ],
+      "rating": 4.86,
+      "reviewCount": 1234,
+      "isNewListing": false,
+      "url": "https://777artours-cmyk.github.io/ArTours/#tours-gallery"
+    },
+    {
+      "id": "aboriginal-cultural",
+      "name": "Aboriginal Cultural Experience & Dreamtime Stories",
+      "category": "Cultural Tours",
+      "description": "Learn about Aboriginal culture with Indigenous guides. Hear ancient Dreamtime stories and traditions.",
+      "priceAUD": 225,
+      "duration": "4-5 hours",
+      "groupSize": "Groups up to 10",
+      "difficulty": "Easy",
+      "accessibility": true,
+      "highlights": [
+        "Indigenous guide from Kulin nation",
+        "Sacred site visits",
+        "Dreamtime story telling",
+        "Bush tucker sampling",
+        "Traditional art workshop",
+        "Ceremonial experiences",
+        "Connection to land & culture"
+      ],
+      "includes": [
+        "Expert guide",
+        "Bush tucker",
+        "Art workshop",
+        "Transport"
+      ],
+      "bestFor": [
+        "Cultural enthusiasts",
+        "Families",
+        "Respectful travelers"
+      ],
+      "rating": 4.92,
+      "reviewCount": 765,
+      "isNewListing": false,
+      "url": "https://777artours-cmyk.github.io/ArTours/#tours-gallery"
+    },
+    {
+      "id": "adventure-rock-climbing",
+      "name": "Rock Climbing & Abseiling Experience - Grampians",
+      "category": "Adventure",
+      "description": "Adventure seekers! Rock climbing and abseiling lessons with professional guides.",
+      "priceAUD": 235,
+      "duration": "6-7 hours",
+      "groupSize": "Groups up to 8",
+      "difficulty": "Hard",
+      "accessibility": false,
+      "highlights": [
+        "Professional rock climbing instruction",
+        "Abseiling down cliff faces",
+        "Safety equipment & training",
+        "Stunning Grampians scenery",
+        "Multiple difficulty levels",
+        "Lunch & refreshments",
+        "Photography of your adventure"
+      ],
+      "includes": [
+        "Equipment",
+        "Guide",
+        "Lunch",
+        "Safety gear"
+      ],
+      "bestFor": [
+        "Adventure seekers",
+        "Thrill lovers",
+        "Fitness enthusiasts"
+      ],
+      "rating": 4.87,
+      "reviewCount": 543,
+      "isNewListing": false,
+      "url": "https://777artours-cmyk.github.io/ArTours/#tours-gallery"
+    },
+    {
+      "id": "nsw-sydney-harbour",
+      "name": "Sydney Harbour & Opera House Private Tour",
+      "category": "New South Wales",
+      "description": "A private chauffeur-guided tour of Sydney's icons: the Opera House, Harbour Bridge, Circular Quay, and The Rocks, with time at Bondi Beach.",
+      "priceAUD": 450,
+      "duration": "6-7 hours",
+      "groupSize": "Private (up to 7 passengers)",
+      "difficulty": "Easy",
+      "accessibility": true,
+      "highlights": [
+        "Sydney Opera House exterior & forecourt",
+        "Sydney Harbour Bridge lookout",
+        "The Rocks historic precinct",
+        "Bondi Beach and coastal walk",
+        "Private, air-conditioned vehicle",
+        "Flexible stops for photography"
+      ],
+      "includes": [
+        "Private vehicle & driver-guide",
+        "Hotel pickup & drop-off"
+      ],
+      "bestFor": [
+        "Couples",
+        "Families",
+        "First-time Sydney visitors"
+      ],
+      "rating": null,
+      "reviewCount": 0,
+      "isNewListing": true,
+      "url": "https://777artours-cmyk.github.io/ArTours/#tours-gallery"
+    },
+    {
+      "id": "qld-reef-cairns",
+      "name": "Great Barrier Reef Private Day Tour (Cairns)",
+      "category": "Queensland",
+      "description": "A private, small-group day trip from Cairns out to the Great Barrier Reef, with snorkelling and reef-viewing arranged through licensed reef operators.",
+      "priceAUD": 520,
+      "duration": "Full day (approx. 8 hours)",
+      "groupSize": "Private (up to 7 passengers)",
+      "difficulty": "Easy",
+      "accessibility": false,
+      "highlights": [
+        "Transfer to reef vessel departure point",
+        "Snorkelling on the Great Barrier Reef",
+        "Marine park entry arranged",
+        "Underwater photography opportunities",
+        "Lunch aboard included"
+      ],
+      "includes": [
+        "Hotel transfer",
+        "Reef vessel transfer coordination",
+        "Lunch"
+      ],
+      "bestFor": [
+        "Snorkellers",
+        "Divers",
+        "Nature lovers"
+      ],
+      "rating": null,
+      "reviewCount": 0,
+      "isNewListing": true,
+      "url": "https://777artours-cmyk.github.io/ArTours/#tours-gallery"
+    },
+    {
+      "id": "sa-barossa-valley",
+      "name": "Barossa Valley Private Wine Tour",
+      "category": "South Australia",
+      "description": "A private day tour through one of Australia's most celebrated wine regions, visiting Barossa Valley cellar doors with a personal driver-guide.",
+      "priceAUD": 480,
+      "duration": "8 hours",
+      "groupSize": "Private (up to 7 passengers)",
+      "difficulty": "Easy",
+      "accessibility": true,
+      "highlights": [
+        "Visits to Barossa Valley cellar doors",
+        "Views from Mengler Hill lookout",
+        "Local produce & cheese tasting",
+        "Flexible itinerary based on your preferences"
+      ],
+      "includes": [
+        "Private vehicle & driver",
+        "Cellar door tasting fees (selected venues)"
+      ],
+      "bestFor": [
+        "Wine enthusiasts",
+        "Couples",
+        "Small groups"
+      ],
+      "rating": null,
+      "reviewCount": 0,
+      "isNewListing": true,
+      "url": "https://777artours-cmyk.github.io/ArTours/#tours-gallery"
+    },
+    {
+      "id": "wa-pinnacles-desert",
+      "name": "Pinnacles Desert Private Day Tour",
+      "category": "Western Australia",
+      "description": "A private day tour from Perth to the otherworldly limestone formations of the Pinnacles Desert in Nambung National Park, with coastal stops en route.",
+      "priceAUD": 460,
+      "duration": "9-10 hours",
+      "groupSize": "Private (up to 7 passengers)",
+      "difficulty": "Easy",
+      "accessibility": true,
+      "highlights": [
+        "Pinnacles Desert, Nambung National Park",
+        "Coastal towns en route (Lancelin/Cervantes)",
+        "Sunset viewing option available",
+        "Private, air-conditioned vehicle"
+      ],
+      "includes": [
+        "Private vehicle & driver-guide",
+        "National park entry fee"
+      ],
+      "bestFor": [
+        "Photographers",
+        "Couples",
+        "Nature lovers"
+      ],
+      "rating": null,
+      "reviewCount": 0,
+      "isNewListing": true,
+      "url": "https://777artours-cmyk.github.io/ArTours/#tours-gallery"
+    },
+    {
+      "id": "tas-cradle-mountain",
+      "name": "Cradle Mountain Private Day Tour",
+      "category": "Tasmania",
+      "description": "A private tour into Cradle Mountain-Lake St Clair National Park, one of Tasmania's most iconic wilderness landscapes, with time at Dove Lake.",
+      "priceAUD": 490,
+      "duration": "Full day",
+      "groupSize": "Private (up to 7 passengers)",
+      "difficulty": "Moderate",
+      "accessibility": false,
+      "highlights": [
+        "Dove Lake circuit (walking, weather permitting)",
+        "Cradle Mountain viewpoints",
+        "Tasmanian wildlife spotting",
+        "Flexible pace with a private driver-guide"
+      ],
+      "includes": [
+        "Private vehicle & driver-guide",
+        "National park entry fee"
+      ],
+      "bestFor": [
+        "Hikers",
+        "Nature lovers",
+        "Photographers"
+      ],
+      "rating": null,
+      "reviewCount": 0,
+      "isNewListing": true,
+      "url": "https://777artours-cmyk.github.io/ArTours/#tours-gallery"
+    },
+    {
+      "id": "nt-uluru",
+      "name": "Uluru-Kata Tjuta Private Tour",
+      "category": "Northern Territory",
+      "description": "A private tour of Uluru-Kata Tjuta National Park with a personal driver-guide, including the Uluru base walk and sunset or sunrise viewing.",
+      "priceAUD": 550,
+      "duration": "Full day",
+      "groupSize": "Private (up to 7 passengers)",
+      "difficulty": "Moderate",
+      "accessibility": false,
+      "highlights": [
+        "Uluru base walk (in full or part, as preferred)",
+        "Kata Tjuta viewing area",
+        "Sunrise or sunset viewing option",
+        "Cultural context shared respectfully, with reference to Anangu traditional owners"
+      ],
+      "includes": [
+        "Private vehicle & driver-guide",
+        "National park entry fee"
+      ],
+      "bestFor": [
+        "Couples",
+        "Photographers",
+        "Cultural travellers"
+      ],
+      "rating": null,
+      "reviewCount": 0,
+      "isNewListing": true,
+      "url": "https://777artours-cmyk.github.io/ArTours/#tours-gallery"
+    },
+    {
+      "id": "act-canberra",
+      "name": "Canberra National Capital Private Tour",
+      "category": "Australian Capital Territory",
+      "description": "A private tour of Canberra's national institutions, including Parliament House, the Australian War Memorial, and Lake Burley Griffin.",
+      "priceAUD": 400,
+      "duration": "6 hours",
+      "groupSize": "Private (up to 7 passengers)",
+      "difficulty": "Easy",
+      "accessibility": true,
+      "highlights": [
+        "Parliament House (exterior and public areas)",
+        "Australian War Memorial",
+        "Lake Burley Griffin lookout",
+        "National Gallery of Australia (exterior, optional stop)"
+      ],
+      "includes": [
+        "Private vehicle & driver-guide"
+      ],
+      "bestFor": [
+        "Families",
+        "History enthusiasts",
+        "School groups"
+      ],
+      "rating": null,
+      "reviewCount": 0,
+      "isNewListing": true,
+      "url": "https://777artours-cmyk.github.io/ArTours/#tours-gallery"
+    }
+  ]
+}
