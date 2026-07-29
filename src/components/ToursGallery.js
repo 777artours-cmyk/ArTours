@@ -160,7 +160,9 @@ function ToursGallery() {
                     loading="lazy"
                   />
                   <div className="rating-badge">
-                    ⭐ {tour.rating} ({tour.reviews.toLocaleString()} reviews)
+                    {tour.reviews > 0
+                      ? `⭐ ${tour.rating} (${tour.reviews.toLocaleString()} reviews)`
+                      : '🆕 New tour'}
                   </div>
                 </div>
 

@@ -32,7 +32,7 @@ export const toursDatabase = {
       returnTime: '8:30 PM',
       startDate: '2024-01-01',
       verified: true,
-      operator: 'Go West Tours',
+      operator: 'AR Tours',
       tags: ['iconic', 'beaches', 'nature', 'photography']
     },
     {
@@ -63,7 +63,7 @@ export const toursDatabase = {
       returnTime: '11:00 PM',
       startDate: '2024-01-01',
       verified: true,
-      operator: 'Sunset Tours Australia',
+      operator: 'AR Tours',
       tags: ['romantic', 'sunset', 'photography', 'intimate']
     },
   ],
@@ -100,7 +100,7 @@ export const toursDatabase = {
       returnTime: '9:00 PM',
       startDate: '2024-01-01',
       verified: true,
-      operator: 'Phillip Island Tours Victoria',
+      operator: 'AR Tours',
       tags: ['wildlife', 'family-friendly', 'nature', 'penguins']
     },
     {
@@ -133,7 +133,7 @@ export const toursDatabase = {
       returnTime: '9:30 PM',
       startDate: '2024-01-01',
       verified: true,
-      operator: 'Luxury Wildlife Tours',
+      operator: 'AR Tours',
       tags: ['vip', 'luxury', 'exclusive', 'premium']
     },
   ],
@@ -170,7 +170,7 @@ export const toursDatabase = {
       returnTime: '4:30 PM',
       startDate: '2024-01-01',
       verified: true,
-      operator: 'Yarra Valley Premium Tours',
+      operator: 'AR Tours',
       tags: ['wine', 'food', 'gourmet', 'tasting']
     },
     {
@@ -203,7 +203,7 @@ export const toursDatabase = {
       returnTime: '6:00 PM',
       startDate: '2024-01-01',
       verified: true,
-      operator: 'Luxe Yarra Experiences',
+      operator: 'AR Tours',
       tags: ['luxury', 'wine', 'spa', 'gourmet']
     },
   ],
@@ -240,7 +240,7 @@ export const toursDatabase = {
       returnTime: '2:30 PM',
       startDate: '2024-01-01',
       verified: true,
-      operator: 'Dandenong Mountain Tours',
+      operator: 'AR Tours',
       tags: ['heritage', 'family', 'scenic', 'railway']
     },
   ],
@@ -277,7 +277,7 @@ export const toursDatabase = {
       returnTime: 'Flexible',
       startDate: '2024-01-01',
       verified: true,
-      operator: 'Melbourne Luxury Transfers',
+      operator: 'AR Tours',
       tags: ['luxury', 'private', 'flexible', 'comfort']
     },
     {
@@ -310,7 +310,7 @@ export const toursDatabase = {
       returnTime: '7:00 PM',
       startDate: '2024-01-01',
       verified: true,
-      operator: 'Melbourne Bespoke Tours',
+      operator: 'AR Tours',
       tags: ['private', 'custom', 'luxury', 'personalized']
     },
   ],
@@ -347,7 +347,7 @@ export const toursDatabase = {
       returnTime: '1:00 PM',
       startDate: '2024-01-01',
       verified: true,
-      operator: 'Melbourne Street Art Tours',
+      operator: 'AR Tours',
       tags: ['art', 'walking', 'cultural', 'urban']
     },
     {
@@ -380,7 +380,7 @@ export const toursDatabase = {
       returnTime: '1:00 PM',
       startDate: '2024-01-01',
       verified: true,
-      operator: 'Melbourne Culinary Tours',
+      operator: 'AR Tours',
       tags: ['food', 'coffee', 'culture', 'tasting']
     },
   ],
@@ -417,7 +417,7 @@ export const toursDatabase = {
       returnTime: '2:30 PM',
       startDate: '2024-01-01',
       verified: true,
-      operator: 'Wildlife Victoria Tours',
+      operator: 'AR Tours',
       tags: ['wildlife', 'family', 'animals', 'nature']
     },
     {
@@ -450,7 +450,7 @@ export const toursDatabase = {
       returnTime: '10:00 PM',
       startDate: '2024-01-01',
       verified: true,
-      operator: 'Moonlit Sanctuary',
+      operator: 'AR Tours',
       tags: ['wildlife', 'nocturnal', 'adventure', 'family']
     },
   ],
@@ -487,7 +487,7 @@ export const toursDatabase = {
       returnTime: '6:30 PM',
       startDate: '2024-01-01',
       verified: true,
-      operator: 'Grampians Adventure Tours',
+      operator: 'AR Tours',
       tags: ['hiking', 'nature', 'adventure', 'parks']
     },
   ],
@@ -524,7 +524,7 @@ export const toursDatabase = {
       returnTime: '6:00 PM',
       startDate: '2024-01-01',
       verified: true,
-      operator: 'Peninsula Wine Tours',
+      operator: 'AR Tours',
       tags: ['wine', 'beach', 'relaxation', 'scenic']
     },
   ],
@@ -561,7 +561,7 @@ export const toursDatabase = {
       returnTime: '3:00 PM',
       startDate: '2024-01-01',
       verified: true,
-      operator: 'Kulin Nations Cultural Tours',
+      operator: 'AR Tours',
       tags: ['cultural', 'aboriginal', 'heritage', 'authentic']
     },
   ],
@@ -598,8 +598,246 @@ export const toursDatabase = {
       returnTime: '3:30 PM',
       startDate: '2024-01-01',
       verified: true,
-      operator: 'Australian Adventure Sports',
+      operator: 'AR Tours',
       tags: ['adventure', 'sports', 'adrenaline', 'outdoor']
+    },
+  ],
+
+  // NATIONAL EXPANSION — new private tours outside Victoria. These are new
+  // AR Tours offerings without an operating history, so rating/reviews are
+  // left at 0 rather than inventing numbers; the UI shows a "New tour" badge
+  // instead of a star rating for these until real reviews come in.
+  newSouthWales: [
+    {
+      id: 'nsw-sydney-harbour',
+      category: 'New South Wales',
+      name: 'Sydney Harbour & Opera House Private Tour',
+      price: 450,
+      rating: 0,
+      reviews: 0,
+      duration: '6-7 hours',
+      groupSize: 'Private (up to 7 passengers)',
+      image: '🎭',
+      description: 'A private chauffeur-guided tour of Sydney\'s icons: the Opera House, Harbour Bridge, Circular Quay, and The Rocks, with time at Bondi Beach.',
+      highlights: [
+        'Sydney Opera House exterior & forecourt',
+        'Sydney Harbour Bridge lookout',
+        'The Rocks historic precinct',
+        'Bondi Beach and coastal walk',
+        'Private, air-conditioned vehicle',
+        'Flexible stops for photography'
+      ],
+      includes: ['Private vehicle & driver-guide', 'Hotel pickup & drop-off'],
+      notIncludes: ['Opera House interior tour tickets', 'Meals'],
+      bestFor: ['Couples', 'Families', 'First-time Sydney visitors'],
+      difficulty: 'Easy',
+      accessibility: true,
+      meetingPoint: 'Sydney CBD hotel pickup',
+      departureTime: '9:00 AM',
+      returnTime: '4:00 PM',
+      startDate: '2026-08-01',
+      verified: false,
+      operator: 'AR Tours',
+      tags: ['sydney', 'icons', 'harbour', 'new']
+    },
+  ],
+
+  queensland: [
+    {
+      id: 'qld-reef-cairns',
+      category: 'Queensland',
+      name: 'Great Barrier Reef Private Day Tour (Cairns)',
+      price: 520,
+      rating: 0,
+      reviews: 0,
+      duration: 'Full day (approx. 8 hours)',
+      groupSize: 'Private (up to 7 passengers)',
+      image: '🐠',
+      description: 'A private, small-group day trip from Cairns out to the Great Barrier Reef, with snorkelling and reef-viewing arranged through licensed reef operators.',
+      highlights: [
+        'Transfer to reef vessel departure point',
+        'Snorkelling on the Great Barrier Reef',
+        'Marine park entry arranged',
+        'Underwater photography opportunities',
+        'Lunch aboard included'
+      ],
+      includes: ['Hotel transfer', 'Reef vessel transfer coordination', 'Lunch'],
+      notIncludes: ['Diving certification courses', 'Wetsuit hire (available on request)'],
+      bestFor: ['Snorkellers', 'Divers', 'Nature lovers'],
+      difficulty: 'Easy',
+      accessibility: false,
+      meetingPoint: 'Cairns hotel pickup',
+      departureTime: '7:00 AM',
+      returnTime: '5:30 PM',
+      startDate: '2026-08-01',
+      verified: false,
+      operator: 'AR Tours',
+      tags: ['queensland', 'reef', 'snorkelling', 'new']
+    },
+  ],
+
+  southAustralia: [
+    {
+      id: 'sa-barossa-valley',
+      category: 'South Australia',
+      name: 'Barossa Valley Private Wine Tour',
+      price: 480,
+      rating: 0,
+      reviews: 0,
+      duration: '8 hours',
+      groupSize: 'Private (up to 7 passengers)',
+      image: '🍇',
+      description: 'A private day tour through one of Australia\'s most celebrated wine regions, visiting Barossa Valley cellar doors with a personal driver-guide.',
+      highlights: [
+        'Visits to Barossa Valley cellar doors',
+        'Views from Mengler Hill lookout',
+        'Local produce & cheese tasting',
+        'Flexible itinerary based on your preferences'
+      ],
+      includes: ['Private vehicle & driver', 'Cellar door tasting fees (selected venues)'],
+      notIncludes: ['Lunch', 'Wine purchases'],
+      bestFor: ['Wine enthusiasts', 'Couples', 'Small groups'],
+      difficulty: 'Easy',
+      accessibility: true,
+      meetingPoint: 'Adelaide hotel pickup',
+      departureTime: '9:00 AM',
+      returnTime: '5:00 PM',
+      startDate: '2026-08-01',
+      verified: false,
+      operator: 'AR Tours',
+      tags: ['south australia', 'wine', 'barossa', 'new']
+    },
+  ],
+
+  westernAustralia: [
+    {
+      id: 'wa-pinnacles-desert',
+      category: 'Western Australia',
+      name: 'Pinnacles Desert Private Day Tour',
+      price: 460,
+      rating: 0,
+      reviews: 0,
+      duration: '9-10 hours',
+      groupSize: 'Private (up to 7 passengers)',
+      image: '🏜️',
+      description: 'A private day tour from Perth to the otherworldly limestone formations of the Pinnacles Desert in Nambung National Park, with coastal stops en route.',
+      highlights: [
+        'Pinnacles Desert, Nambung National Park',
+        'Coastal towns en route (Lancelin/Cervantes)',
+        'Sunset viewing option available',
+        'Private, air-conditioned vehicle'
+      ],
+      includes: ['Private vehicle & driver-guide', 'National park entry fee'],
+      notIncludes: ['Meals'],
+      bestFor: ['Photographers', 'Couples', 'Nature lovers'],
+      difficulty: 'Easy',
+      accessibility: true,
+      meetingPoint: 'Perth hotel pickup',
+      departureTime: '8:00 AM',
+      returnTime: '6:00 PM',
+      startDate: '2026-08-01',
+      verified: false,
+      operator: 'AR Tours',
+      tags: ['western australia', 'pinnacles', 'desert', 'new']
+    },
+  ],
+
+  tasmania: [
+    {
+      id: 'tas-cradle-mountain',
+      category: 'Tasmania',
+      name: 'Cradle Mountain Private Day Tour',
+      price: 490,
+      rating: 0,
+      reviews: 0,
+      duration: 'Full day',
+      groupSize: 'Private (up to 7 passengers)',
+      image: '🏔️',
+      description: 'A private tour into Cradle Mountain-Lake St Clair National Park, one of Tasmania\'s most iconic wilderness landscapes, with time at Dove Lake.',
+      highlights: [
+        'Dove Lake circuit (walking, weather permitting)',
+        'Cradle Mountain viewpoints',
+        'Tasmanian wildlife spotting',
+        'Flexible pace with a private driver-guide'
+      ],
+      includes: ['Private vehicle & driver-guide', 'National park entry fee'],
+      notIncludes: ['Meals', 'Overnight accommodation'],
+      bestFor: ['Hikers', 'Nature lovers', 'Photographers'],
+      difficulty: 'Moderate',
+      accessibility: false,
+      meetingPoint: 'Launceston or Devonport pickup',
+      departureTime: '8:00 AM',
+      returnTime: '6:00 PM',
+      startDate: '2026-08-01',
+      verified: false,
+      operator: 'AR Tours',
+      tags: ['tasmania', 'cradle mountain', 'wilderness', 'new']
+    },
+  ],
+
+  northernTerritory: [
+    {
+      id: 'nt-uluru',
+      category: 'Northern Territory',
+      name: 'Uluru-Kata Tjuta Private Tour',
+      price: 550,
+      rating: 0,
+      reviews: 0,
+      duration: 'Full day',
+      groupSize: 'Private (up to 7 passengers)',
+      image: '🪨',
+      description: 'A private tour of Uluru-Kata Tjuta National Park with a personal driver-guide, including the Uluru base walk and sunset or sunrise viewing.',
+      highlights: [
+        'Uluru base walk (in full or part, as preferred)',
+        'Kata Tjuta viewing area',
+        'Sunrise or sunset viewing option',
+        'Cultural context shared respectfully, with reference to Anangu traditional owners'
+      ],
+      includes: ['Private vehicle & driver-guide', 'National park entry fee'],
+      notIncludes: ['Meals', 'Accommodation'],
+      bestFor: ['Couples', 'Photographers', 'Cultural travellers'],
+      difficulty: 'Moderate',
+      accessibility: false,
+      meetingPoint: 'Ayers Rock Resort / Yulara pickup',
+      departureTime: 'Varies with sunrise/sunset',
+      returnTime: 'Varies with sunrise/sunset',
+      startDate: '2026-08-01',
+      verified: false,
+      operator: 'AR Tours',
+      tags: ['northern territory', 'uluru', 'red centre', 'new']
+    },
+  ],
+
+  act: [
+    {
+      id: 'act-canberra',
+      category: 'Australian Capital Territory',
+      name: 'Canberra National Capital Private Tour',
+      price: 400,
+      rating: 0,
+      reviews: 0,
+      duration: '6 hours',
+      groupSize: 'Private (up to 7 passengers)',
+      image: '🏛️',
+      description: 'A private tour of Canberra\'s national institutions, including Parliament House, the Australian War Memorial, and Lake Burley Griffin.',
+      highlights: [
+        'Parliament House (exterior and public areas)',
+        'Australian War Memorial',
+        'Lake Burley Griffin lookout',
+        'National Gallery of Australia (exterior, optional stop)'
+      ],
+      includes: ['Private vehicle & driver-guide'],
+      notIncludes: ['Museum/gallery ticketed exhibitions', 'Meals'],
+      bestFor: ['Families', 'History enthusiasts', 'School groups'],
+      difficulty: 'Easy',
+      accessibility: true,
+      meetingPoint: 'Canberra hotel pickup',
+      departureTime: '9:00 AM',
+      returnTime: '3:00 PM',
+      startDate: '2026-08-01',
+      verified: false,
+      operator: 'AR Tours',
+      tags: ['canberra', 'act', 'capital', 'new']
     },
   ],
 };
