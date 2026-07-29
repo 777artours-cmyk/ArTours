@@ -4,9 +4,12 @@ import { tourImages } from '../data/imageLibrary';
 
 const slides = [
   tourImages.greatOceanRoad.hero,
+  tourImages.uluru.hero,
+  tourImages.sydney.hero,
   tourImages.penguinParade.hero,
   tourImages.yarraValley.hero,
 ];
+const SLIDE_INTERVAL = 18 / slides.length;
 
 function AnimatedHero() {
   const scrollToTours = () => {
@@ -26,7 +29,7 @@ function AnimatedHero() {
             className="hero-photo-slide"
             style={{
               backgroundImage: `url("${src}")`,
-              animationDelay: `${idx * 6}s`,
+              animationDelay: `${idx * SLIDE_INTERVAL}s`,
             }}
           />
         ))}
@@ -37,7 +40,7 @@ function AnimatedHero() {
       <div className="hero-text-overlay">
         <h1 className="hero-fade-in">Explore Australia Like Never Before</h1>
         <p className="hero-fade-in hero-fade-in-delay">
-          Journey through Melbourne &amp; Victoria with expert-guided tours
+          Private, expert-guided tours from the Great Ocean Road to Uluru
         </p>
         <button className="btn btn-accent btn-lg hero-fade-in hero-fade-in-delay-2" onClick={scrollToTours}>
           Explore Tours
