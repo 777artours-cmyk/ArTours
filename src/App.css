@@ -14,9 +14,10 @@ main {
   border-radius: 5px;
   font-size: 1rem;
   font-weight: 600;
+  letter-spacing: 0.3px;
   transition: all 0.3s ease;
   cursor: pointer;
-  border: none;
+  border: 1px solid transparent;
   text-decoration: none;
   display: inline-block;
   text-align: center;
@@ -25,12 +26,14 @@ main {
 .btn-primary {
   background-color: var(--primary);
   color: white;
+  border-color: var(--gold);
 }
 
 .btn-primary:hover {
   background-color: #0a2844;
+  border-color: var(--gold-light);
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(15, 58, 92, 0.2);
+  box-shadow: 0 10px 25px rgba(15, 58, 92, 0.25), 0 0 0 1px var(--gold) inset;
 }
 
 .btn-secondary {
@@ -157,9 +160,9 @@ main {
 
 /* Divider */
 .divider {
-  height: 4px;
-  background: linear-gradient(90deg, var(--secondary), var(--accent));
-  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  width: 70px;
   margin: 20px auto;
   border-radius: 2px;
 }

@@ -5,13 +5,15 @@
 }
 
 :root {
-  /* Travel/Tourism palette (WCAG-validated) */
+  /* Luxury travel palette: navy + gold accent (WCAG-validated) */
   --primary: #0C4A6E;
   --primary-deep: #0F3A5C;
   --secondary: #0EA5E9;
   --secondary-light: #38BDF8;
   --accent: #EA580C;
   --accent-light: #FF8C42;
+  --gold: #A16207;
+  --gold-light: #D4A017;
   --bg-tint: #F0F9FF;
   --card-border: #BAE6FD;
   --light: #F5F5F5;
@@ -20,6 +22,8 @@
   --success: #2ECC71;
   --warning: #F39C12;
   --danger: #DC2626;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html {
@@ -27,7 +31,7 @@ html {
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font-body);
   background-color: #ffffff;
   color: var(--dark);
   line-height: 1.6;
@@ -35,6 +39,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: var(--primary);
