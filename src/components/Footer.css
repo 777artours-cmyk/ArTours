@@ -22,6 +22,26 @@
   font-weight: 600;
 }
 
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.footer-brand h4 {
+  margin-bottom: 0;
+  font-size: 1.3rem;
+}
+
+.footer-logo-mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: white;
+}
+
 .footer-section p {
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;

@@ -1,6 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import { PHOTO_CREDITS } from '../data/imageLibrary';
+import logo from '../assets/logo.jpg';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,13 +12,11 @@ function Footer() {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-section">
-              <h4>AR Tours</h4>
-              <p>Melbourne's premier road touring company. Experience Victoria's most iconic destinations with expert local guides and comfortable, professional transport.</p>
-              <div className="footer-social">
-                <a href="#facebook" className="social-icon">f</a>
-                <a href="#instagram" className="social-icon">📷</a>
-                <a href="#youtube" className="social-icon">▶</a>
+              <div className="footer-brand">
+                <img src={logo} alt="AR Tours logo" className="footer-logo-mark" />
+                <h4>AR Tours</h4>
               </div>
+              <p>Australia's luxury private touring company. Experience the country's most iconic destinations with expert local guides and comfortable, professional transport.</p>
             </div>
 
             <div className="footer-section">
@@ -26,7 +25,7 @@ function Footer() {
                 <li><a href="#tours">Our Tours</a></li>
                 <li><a href="#testimonials">Reviews</a></li>
                 <li><a href="#booking">Contact Us</a></li>
-                <li><a href="#tours">Book Now</a></li>
+                <li><a href="#booking">Book Now</a></li>
               </ul>
             </div>
 
@@ -58,11 +57,9 @@ function Footer() {
           <div className="footer-bottom-content">
             <p>&copy; {currentYear} AR Tours. All rights reserved.</p>
             <div className="footer-legal">
-              <a href="#privacy">Privacy Policy</a>
+              <a href="./privacy-policy.html">Privacy Policy</a>
               <span className="separator">•</span>
-              <a href="#terms">Terms & Conditions</a>
-              <span className="separator">•</span>
-              <a href="#sitemap">Sitemap</a>
+              <a href="./terms.html">Terms &amp; Conditions</a>
             </div>
           </div>
           <p className="photo-credits">

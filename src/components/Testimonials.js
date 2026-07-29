@@ -121,9 +121,6 @@ function Testimonials() {
                       <p className="guest-location">{testimonial.location}</p>
                     </div>
                   </div>
-                  {testimonial.verified && (
-                    <span className="verified-badge" title="Verified Review">✓</span>
-                  )}
                 </div>
 
                 <div className="testimonial-content">

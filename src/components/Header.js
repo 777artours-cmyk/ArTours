@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logo from '../assets/logo.jpg';
 import './Header.css';
 
 function Header() {
@@ -17,8 +18,11 @@ function Header() {
       <div className="container">
         <div className="header-content">
           <div className="logo">
-            <h2>🌍 AR Tours</h2>
-            <p className="tagline">Australia Road Tours — Melbourne's Premier Tour Experience</p>
+            <img src={logo} alt="AR Tours logo" className="logo-mark" />
+            <div className="logo-text">
+              <h2>AR Tours</h2>
+              <p className="tagline">Australia Road Tours — Luxury Private Tours Nationwide</p>
+            </div>
           </div>
 
           <nav className={`nav ${mobileMenuOpen ? 'active' : ''}`}>

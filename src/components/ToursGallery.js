@@ -159,11 +159,6 @@ function ToursGallery() {
                     className="tour-gallery-photo"
                     loading="lazy"
                   />
-                  {tour.verified && (
-                    <div className="verified-badge" title="Verified Tour">
-                      ✓ Verified
-                    </div>
-                  )}
                   <div className="rating-badge">
                     ⭐ {tour.rating} ({tour.reviews.toLocaleString()} reviews)
                   </div>
